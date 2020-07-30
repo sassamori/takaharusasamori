@@ -146,3 +146,11 @@
 .articleMain .core .pageMain .pdfLink a:hover{
     opacity: 0.8;
 }
+
+/*ページナビ*/
+.articleMain .core .pageNavi{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 20px 0;
+}
