@@ -89,6 +89,12 @@
     font-size: 26px;
     line-height: 1.23;
 }
+/*コア部分*/
+.core{
+    border: solid 1px black;
+    width: 800px;
+    margin: 0 auto;
+}
 
 /*メイン上部シェアボタン*/
 .articleMain .share{
@@ -111,5 +117,5 @@
 }
 
 .articleMain .share a:last-child{
-    margin-right: 210px;
+    padding-right: 0;
 }
