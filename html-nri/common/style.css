@@ -61,3 +61,31 @@
     color: lightslategray;
     text-decoration: none;
 }
+
+/*---メイン---*/
+/*メインヘッダーイメージ*/
+.articleMain .articleMainImage{
+    position: relative;
+}
+
+.articleMain .articleMainImage img{
+    vertical-align: bottom;
+}
+
+.articleMain .articleMainImage .articleMainText{
+    position: absolute;
+    left: 140px;
+    top: 30px;
+    color: white;
+}
+
+.articleMain .articleMainImage .articleMainText p{
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.articleMain .articleMainImage .articleMainText h1{
+    padding-top: 10px;
+    font-size: 26px;
+    line-height: 1.23;
+}
