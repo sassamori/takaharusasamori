@@ -63,7 +63,7 @@
 }
 
 /*---メイン---*/
-/*メインヘッダーイメージ*/
+/*メインヘッダー画像*/
 .articleMain .articleMainImage{
     position: relative;
 }
@@ -88,4 +88,28 @@
     padding-top: 10px;
     font-size: 26px;
     line-height: 1.23;
+}
+
+/*メイン上部シェアボタン*/
+.articleMain .share{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.articleMain .share p{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: dimgray;
+    padding: 10px 15px;
+}
+
+.articleMain .share a{
+    display: block;
+    padding: 20px 10px;
+}
+
+.articleMain .share a:last-child{
+    margin-right: 210px;
 }
