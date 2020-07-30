@@ -1,3 +1,4 @@
+/*ヘッダー*/
 .fixedHeader{
     display: flex;
     width: 100%;
@@ -47,5 +48,16 @@
 }
 
 .breadcrumbs{
-    margin-top: 100px;
+    margin-top: 60px;
+}
+
+.breadcrumbs p{
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px 50px;
+}
+
+.breadcrumbs p a{
+    color: lightslategray;
+    text-decoration: none;
 }
