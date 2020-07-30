@@ -119,3 +119,30 @@
 .articleMain .share a:last-child{
     padding-right: 0;
 }
+
+/*メイン本文*/
+.articleMain .core .pageMain h2{
+    font-size: 20px;
+    background-image: url(../images/list.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 32px;
+    margin-bottom: 20px;
+}
+
+.articleMain .core .pageMain p{
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 10px 10px;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+}
+
+.articleMain .core .pageMain .pdfLink{
+    text-align: center;
+    padding: 25px;
+}
+
+.articleMain .core .pageMain .pdfLink a:hover{
+    opacity: 0.8;
+}
