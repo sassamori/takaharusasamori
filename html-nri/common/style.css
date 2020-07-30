@@ -1,0 +1,51 @@
+.fixedHeader{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    z-index: 1;
+}
+
+.fixedHeader .fixedHeaderLeft h1{
+    margin: 0;
+    padding: 12px 32px;
+}
+
+.fixedHeaderRight{
+    display: flex;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul li{
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 8px;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.fixedHeaderRight .fixedHeaderRightIcon{
+    display: flex;
+    margin-left: 20px;
+}
+
+.fixedHeaderRight .fixedHeaderRightIcon a{
+    display: block;
+    padding: 15px 15px;
+}
+
+.breadcrumbs{
+    margin-top: 100px;
+}
