@@ -154,6 +154,14 @@
     padding: 20px 0;
 }
 
+.articleMain .core .pageNavi a{
+    text-decoration: none;
+}
+
+.articleMain .core .pageNavi a:hover{
+    text-decoration: underline;
+}
+
 .articleMain .core .strengthNavi{
     background-color: powderblue;
     padding: 25px 15px;
