@@ -111,8 +111,7 @@
 }
 
 .articleMain .share a{
-    display: block;
-    padding: 20px 10px;
+    margin: 20px 10px;
 }
 
 .articleMain .share a:last-child{
