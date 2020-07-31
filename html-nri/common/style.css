@@ -47,6 +47,10 @@
     padding: 15px 15px;
 }
 
+.fixedHeaderRight .fixedHeaderRightIcon a:hover{
+    opacity: 0.6;
+}
+
 .breadcrumbs{
     margin-top: 60px;
 }
