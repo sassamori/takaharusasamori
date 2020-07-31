@@ -91,7 +91,6 @@
 }
 /*コア部分*/
 .core{
-    border: solid 1px black;
     width: 800px;
     margin: 0 auto;
 }
@@ -153,4 +152,47 @@
     justify-content: space-between;
     margin-top: 15px;
     padding: 20px 0;
+}
+
+.articleMain .core .strengthNavi{
+    background-color: powderblue;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+}
+
+.articleMain .core .strengthNavi h3{
+    font-size: 16px;
+    line-height: 1.38;
+    padding: 0;
+    margin: 0;
+}
+
+.articleMain .core .strengthNavi table tr{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.articleMain .core .strengthNavi table tr td{
+    list-style-type: none;
+    border: solid 1px black;
+    border-collapse: separate;
+    border-spacing: 20px;
+    width: 200px;
+    background-color: white;
+    padding: 20px 15px;
+    margin: 10px;
+    display: block;    
+    text-align: center;
+    background-image: url("../images/small_mark02.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 0 center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleMain .core .strengthNavi table tr td a{
+    text-decoration: none;
 }
