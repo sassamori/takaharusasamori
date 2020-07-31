@@ -296,3 +296,58 @@
 .followUs a img{
     padding: 0;
 }
+
+/*アンダーガイド*/
+.underGuide{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    border-bottom: solid 1px lightsteelblue;
+}
+
+.underGuide .underGuideDetail{
+    width: 310px;
+    margin-bottom: 50px;
+}
+
+.underGuide .underGuideDetail h5{
+    font-size: 16px;
+    line-height: 1.38;
+}
+
+.underGuide .underGuideDetail h5 a{
+    text-decoration: none;
+    background-image: url(../images/small_mark02.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    color: black;
+}
+
+.underGuide .underGuideDetail h5 a:hover{
+    text-decoration: underline;
+}
+
+.underGuide .underGuideDetail ul{
+    padding: 0;
+}
+
+.underGuide .underGuideDetail ul a{
+    font-size: 14px;
+    line-height: 1.43;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.underGuide .underGuideDetail ul a:hover{
+    text-decoration: underline;
+}
+
+.underGuide .underGuideDetail ul a li{
+    background-image: url(../images/small_mark02.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin: 15px 0;
+}
