@@ -270,3 +270,29 @@
     padding: 0 30px;
 }
 
+/*フォローアス*/
+.followUs{
+    display: flex;
+    justify-content: center;
+    border: solid 2px gray;
+    border-width: 2px 0;
+    margin: 20px 0;
+    padding: 12px 0;
+}
+
+.followUs p{
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: bold;
+    padding: 5px 30px;
+}
+
+.followUs a{
+    vertical-align: top;
+    padding: 0;
+    margin: 20px;
+}
+
+.followUs a img{
+    padding: 0;
+}
