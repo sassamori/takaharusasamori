@@ -201,8 +201,16 @@
     align-items: center;
 }
 
-.articleMain .core .strengthNavi table tr td a{
+.articleMain .core .strengthNavi table tr td:hover{
+    opacity: 0.8;
+}
+
+.articleMain .core .strengthNavi table tr a{
     text-decoration: none;
+}
+
+.articleMain .core .strengthNavi table tr a:hover{
+    opacity: 0.8;
 }
 
 /*企業情報*/
