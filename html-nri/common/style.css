@@ -394,6 +394,10 @@
     text-decoration: none;
 }
 
+.footer .footerAlign ul li a:hover{
+    text-decoration: underline;
+}
+
 .footer .footerAlign .copyright small{
     font-size: 8px;
     line-height: 1.75;
