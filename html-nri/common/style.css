@@ -159,6 +159,7 @@
 
 .articleMain .core .pageNavi a{
     text-decoration: none;
+    color: #0431B4;
 }
 
 .articleMain .core .pageNavi a:hover{
@@ -210,6 +211,7 @@
 
 .articleMain .core .strengthNavi table tr a{
     text-decoration: none;
+    color: #0431B4;
 }
 
 .articleMain .core .strengthNavi table tr a:hover{
@@ -249,6 +251,7 @@
 
 .companyInfo .companyInfoDetail ul a{
     text-decoration: none;
+    color: #0431B4;
 }
 
 .companyInfo .companyInfoDetail ul a li{
@@ -276,6 +279,7 @@
 .companyInfo .pageBack a{
     text-decoration: none;
     margin: 50px 0;
+    color: #0431B4;
 }
 
 .companyInfo .pageBack a:hover{
