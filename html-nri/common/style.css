@@ -249,22 +249,30 @@
     padding-left: 0;
 }
 
-.companyInfo .companyInfoDetail ul a{
-    text-decoration: none;
-    color: #0431B4;
-}
-
-.companyInfo .companyInfoDetail ul a li{
-    padding: 10px 25px;
+.companyInfo .companyInfoDetail ul li{
+    padding: 10px 32px 10px 0;
     font-size: 14px;
     line-height: 1.43;
+    width: 210px;
     list-style-type: none;
-    background-image: url(../images/small_mark02.png);
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
-    background-position: 0 12px;
-    width: 200px;
+}
+
+.companyInfo .companyInfoDetail ul li a{
+    text-decoration: none;
+    color: #0431B4;
     display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.companyInfo .companyInfoDetail ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/small_mark02.png);
+    background-size: contain;
+    vertical-align: text-bottom;
 }
 
 .companyInfo .companyInfoDetail ul a:hover{
@@ -324,7 +332,7 @@
 .underGuide{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 80px;
+    padding: 0 100px;
     border-bottom: solid 1px lightsteelblue;
 }
 
@@ -355,24 +363,31 @@
     padding: 0;
 }
 
-.underGuide .underGuideDetail ul a{
+.underGuide .underGuideDetail ul li{
+    
+    margin: 15px 0;
+    list-style-type: none;
+}
+
+.underGuide .underGuideDetail ul li a{
     font-size: 14px;
     line-height: 1.43;
     text-decoration: none;
-    list-style-type: none;
     color: black;
+}
+
+.underGuide .underGuideDetail ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/small_mark02.png);
+    background-size: contain;
+    vertical-align: text-bottom;
 }
 
 .underGuide .underGuideDetail ul a:hover{
     text-decoration: underline;
-}
-
-.underGuide .underGuideDetail ul a li{
-    background-image: url(../images/small_mark02.png);
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    padding-left: 20px;
-    margin: 15px 0;
 }
 
 /*トップに戻るボタン*/
