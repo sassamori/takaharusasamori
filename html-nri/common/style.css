@@ -94,7 +94,7 @@
     line-height: 1.23;
 }
 /*コア部分*/
-.core{
+.articleMainCore{
     width: 800px;
     margin: 0 auto;
 }
@@ -123,7 +123,7 @@
 }
 
 /*メイン本文*/
-.articleMain .core .pageMain h2{
+.articleMain .articleMainCore .pageMain h2{
     font-size: 20px;
     background-image: url(../images/list.png);
     background-size: contain;
@@ -132,7 +132,7 @@
     margin-bottom: 20px;
 }
 
-.articleMain .core .pageMain p{
+.articleMain .articleMainCore .pageMain p{
     font-size: 15px;
     line-height: 1.8;
     margin: 10px 10px;
@@ -140,52 +140,52 @@
     padding-bottom: 20px;
 }
 
-.articleMain .core .pageMain .pdfLink{
+.articleMain .articleMainCore .pageMain .pdfLink{
     text-align: center;
     padding: 25px;
 }
 
-.articleMain .core .pageMain .pdfLink a:hover{
+.articleMain .articleMainCore .pageMain .pdfLink a:hover{
     opacity: 0.8;
 }
 
 /*ページナビ*/
-.articleMain .core .pageNavi{
+.articleMain .articleMainCore .pageNavi{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     padding: 20px 0;
 }
 
-.articleMain .core .pageNavi a{
+.articleMain .articleMainCore .pageNavi a{
     text-decoration: none;
     color: #0431B4;
 }
 
-.articleMain .core .pageNavi a:hover{
+.articleMain .articleMainCore .pageNavi a:hover{
     text-decoration: underline;
 }
 
-.articleMain .core .strengthNavi{
+.articleMain .articleMainCore .strengthNavi{
     background-color: powderblue;
     padding: 25px 15px;
     margin-bottom: 30px;
 }
 
-.articleMain .core .strengthNavi h3{
+.articleMain .articleMainCore .strengthNavi h3{
     font-size: 16px;
     line-height: 1.38;
     padding: 0;
     margin: 0;
 }
 
-.articleMain .core .strengthNavi table tr{
+.articleMain .articleMainCore .strengthNavi table tr{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 }
 
-.articleMain .core .strengthNavi table tr td{
+.articleMain .articleMainCore .strengthNavi table tr td{
     list-style-type: none;
     border: solid 1px black;
     border-collapse: separate;
@@ -205,16 +205,16 @@
     align-items: center;
 }
 
-.articleMain .core .strengthNavi table tr td:hover{
+.articleMain .articleMainCore .strengthNavi table tr td:hover{
     opacity: 0.8;
 }
 
-.articleMain .core .strengthNavi table tr a{
+.articleMain .articleMainCore .strengthNavi table tr a{
     text-decoration: none;
     color: #0431B4;
 }
 
-.articleMain .core .strengthNavi table tr a:hover{
+.articleMain .articleMainCore .strengthNavi table tr a:hover{
     opacity: 0.8;
 }
 
