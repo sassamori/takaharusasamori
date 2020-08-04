@@ -145,6 +145,29 @@
     padding: 25px;
 }
 
+.articleMain .articleMainCore .pageMain .pdfLink:before{
+    
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a{
+    display: inline-block;
+    padding: 15px 20px;
+    color: #FAFAFA;
+    background-color: #0431B4;
+    position: relative;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a:before{
+    content: '\03e';
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    vertical-align: middle;
+}
+
 .articleMain .articleMainCore .pageMain .pdfLink a:hover{
     opacity: 0.8;
 }
