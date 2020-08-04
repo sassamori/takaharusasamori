@@ -181,6 +181,18 @@
     color: #0431B4;
 }
 
+.articleMain .articleMainCore .pageNavi a:first-child:before{
+    content: '\03c';
+    vertical-align: top;
+    padding: 0 8px;
+}
+
+.articleMain .articleMainCore .pageNavi a:last-child:after{
+    content: '\03e';
+    vertical-align: top;
+    padding: 0 8px;
+}
+
 .articleMain .articleMainCore .pageNavi a:hover{
     text-decoration: underline;
 }
