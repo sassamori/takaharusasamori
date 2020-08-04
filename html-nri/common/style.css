@@ -2,7 +2,7 @@
 .fixedHeader{
     display: flex;
     width: 100%;
-    background-color: white;
+    background-color: #FAFAFA;
     justify-content: space-between;
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@
 
 .fixedHeaderRight .fixedHeaderRightText ul li a{
     text-decoration: none;
-    color: black;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -58,11 +58,11 @@
 .breadcrumbs p{
     font-size: 12px;
     line-height: 1.5;
-    padding: 10px 50px;
+    padding: 10px 85px;
 }
 
 .breadcrumbs p a{
-    color: lightslategray;
+    color: #BDBDBD;
     text-decoration: none;
 }
 
@@ -80,7 +80,7 @@
     position: absolute;
     left: 220px;
     top: 30px;
-    color: white;
+    color: #FAFAFA;
 }
 
 .articleMain .articleMainImage .articleMainText p{
@@ -110,7 +110,7 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 1.5;
-    color: dimgray;
+    color: #6E6E6E;
     padding: 10px 15px;
 }
 
@@ -218,11 +218,11 @@
 
 .articleMain .articleMainCore .strengthNavi table tr td{
     list-style-type: none;
-    border: solid 1px black;
+    border: solid 1px #000000;
     border-collapse: separate;
     border-spacing: 20px;
     width: 200px;
-    background-color: white;
+    background-color: #FAFAFA;
     padding: 20px 15px;
     margin: 10px;
     display: block;    
@@ -256,8 +256,8 @@
 }
 
 .companyInfo h4{
-    border-top: solid 1px black;
-    border-bottom: dotted 1px black;
+    border-top: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
     border-width: 1px;
     margin-top: 90px;
     padding: 30px 0;
@@ -266,7 +266,7 @@
 }
 
 .companyInfo .companyInfoDetail{
-    border-bottom: dotted 1px black;
+    border-bottom: dotted 1px #000000;
 }
 
 .companyInfo .companyInfoDetail h5{
@@ -383,7 +383,7 @@
     background-size: 15px 15px;
     background-repeat: no-repeat;
     padding-left: 20px;
-    color: black;
+    color: #000000;
 }
 
 .underGuide .underGuideDetail h5 a:hover{
@@ -404,7 +404,7 @@
     font-size: 14px;
     line-height: 1.43;
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 .underGuide .underGuideDetail ul li a:before{
@@ -459,7 +459,7 @@
 }
 
 .footer .footerLinkAlign ul li a{
-    color: silver;
+    color: #BDBDBD;
     text-decoration: none;
 }
 
