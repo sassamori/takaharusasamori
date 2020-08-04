@@ -142,7 +142,7 @@
 
 .articleMain .articleMainCore .pageMain .pdfLink{
     text-align: center;
-    padding: 25px;
+    padding: 30px;
 }
 
 .articleMain .articleMainCore .pageMain .pdfLink a{
@@ -173,7 +173,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .articleMain .articleMainCore .pageNavi a{
