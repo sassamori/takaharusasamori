@@ -347,7 +347,7 @@
 .followUs{
     display: flex;
     justify-content: center;
-    border: solid 2px gray;
+    border: solid 2px #6E6E6E;
     border-width: 2px 0;
     margin: 20px 0;
     padding: 12px 0;
