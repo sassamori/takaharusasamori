@@ -66,6 +66,17 @@
     text-decoration: none;
 }
 
+.breadcrumbs p a:after{
+    content: '\03e';
+    padding: 0 5px;
+    color: #6E6E6E;
+    font-weight: lighter;
+}
+
+.breadcrumbs p a:last-child:after{
+    content: '';
+}
+
 /*---メイン---*/
 /*メインヘッダー画像*/
 .articleMain .articleMainImage{
