@@ -375,7 +375,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 100px;
-    border-bottom: solid 1px lightsteelblue;
+    border-bottom: solid 1px #BDBDBD;
 }
 
 .underGuide .underGuideDetail{
