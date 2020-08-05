@@ -163,6 +163,7 @@
     color: #FAFAFA;
     background-color: #0431B4;
     position: relative;
+    text-decoration: none;
 }
 
 .articleMain .articleMainCore .pageMain .pdfLink a:before{
