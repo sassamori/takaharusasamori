@@ -461,7 +461,7 @@
     line-height: 1;
     list-style-type: none;
     padding: 0 20px;
-    border-left: solid 1px gray;
+    border-left: solid 1px #6E6E6E;
 }
 
 .footer .footerLinkAlign ul li:first-child{
