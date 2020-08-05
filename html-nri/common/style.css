@@ -85,6 +85,7 @@
 
 .articleMain .articleMainImage img{
     vertical-align: bottom;
+    object-fit: cover;
 }
 
 .articleMain .articleMainImage .articleMainText{
