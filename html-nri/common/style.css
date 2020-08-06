@@ -235,7 +235,7 @@
 
 .articleMain .articleMainCore .strengthNavi table tr td{
     list-style-type: none;
-    border: solid 1px #000000;
+    border: solid 1px #CCCCCC;
     border-collapse: separate;
     border-spacing: 20px;
     width: 200px;
