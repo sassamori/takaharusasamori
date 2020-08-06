@@ -167,13 +167,13 @@
 }
 
 .articleMain .articleMainCore .pageMain .pdfLink a:before{
-    content: '\03e';
+    content: url(../images/small_mark04.jpg);
     display: inline-block;
-    width: 8px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     position: absolute;
-    top: 30px;
-    left: 10px;
+    top: 25px;
+    left: 5px;
     vertical-align: middle;
 }
 
