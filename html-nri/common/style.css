@@ -1,0 +1,490 @@
+/*ヘッダー*/
+.fixedHeader{
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    z-index: 1;
+}
+
+.fixedHeader .fixedHeaderLeft h1{
+    margin: 0;
+    padding: 12px 32px;
+}
+
+.fixedHeaderRight{
+    display: flex;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul li{
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 8px;
+}
+
+.fixedHeaderRight .fixedHeaderRightText ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.fixedHeaderRight .fixedHeaderRightIcon{
+    display: flex;
+    margin-left: 20px;
+}
+
+.fixedHeaderRight .fixedHeaderRightIcon a{
+    display: block;
+    padding: 15px 15px;
+}
+
+.fixedHeaderRight .fixedHeaderRightIcon a:hover{
+    opacity: 0.6;
+}
+
+.breadcrumbs{
+    margin-top: 60px;
+}
+
+.breadcrumbs p{
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px 85px;
+}
+
+.breadcrumbs p a{
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
+.breadcrumbs p a:after{
+    content: '\03e';
+    padding: 0 5px;
+    color: #6E6E6E;
+    font-weight: lighter;
+}
+
+.breadcrumbs p a:last-child:after{
+    content: '';
+}
+
+/*---メイン---*/
+/*メインヘッダー画像*/
+.articleMain .articleMainImage{
+    position: relative;
+}
+
+.articleMain .articleMainImage img{
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+.articleMain .articleMainImage .articleMainText{
+    position: absolute;
+    left: 220px;
+    top: 30px;
+    color: #FAFAFA;
+}
+
+.articleMain .articleMainImage .articleMainText p{
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.articleMain .articleMainImage .articleMainText h1{
+    padding-top: 10px;
+    font-size: 26px;
+    line-height: 1.23;
+}
+/*コア部分*/
+.articleMainCore{
+    width: 800px;
+    margin: 0 auto;
+}
+
+/*メイン上部シェアボタン*/
+.articleMain .share{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.articleMain .share p{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6E6E6E;
+    padding: 10px 15px;
+}
+
+.articleMain .share a{
+    margin: 20px 10px;
+}
+
+.articleMain .share a:last-child{
+    padding-right: 0;
+}
+
+/*メイン本文*/
+.articleMain .articleMainCore .pageMain h2{
+    font-size: 20px;
+    background-image: url(../images/list.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 32px;
+    margin-bottom: 20px;
+}
+
+.articleMain .articleMainCore .pageMain p{
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 10px 10px;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink{
+    text-align: center;
+    padding: 30px;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a{
+    display: inline-block;
+    padding: 15px 20px;
+    color: #FAFAFA;
+    background-color: #035CAB;
+    position: relative;
+    text-decoration: none;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a:before{
+    content: url(../images/small_mark04.jpg);
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    vertical-align: middle;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a:hover{
+    opacity: 0.8;
+}
+
+.articleMain .articleMainCore .pageMain .pdfLink a span img{
+    vertical-align: bottom;
+}
+
+/*ページナビ*/
+.articleMain .articleMainCore .pageNavi{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 30px 0;
+}
+
+.articleMain .articleMainCore .pageNavi a{
+    text-decoration: none;
+    color:#0B4199;
+}
+
+.articleMain .articleMainCore .pageNavi a:first-child:before{
+    content: '\03c';
+    vertical-align: top;
+    padding: 0 8px;
+}
+
+.articleMain .articleMainCore .pageNavi a:last-child:after{
+    content: '\03e';
+    vertical-align: top;
+    padding: 0 8px;
+}
+
+.articleMain .articleMainCore .pageNavi a:hover{
+    text-decoration: underline;
+}
+
+.articleMain .articleMainCore .strengthNavi{
+    background-color: #DEECF8;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+}
+
+.articleMain .articleMainCore .strengthNavi h3{
+    font-size: 16px;
+    line-height: 1.38;
+    padding: 0 12px;
+    margin: 0;
+}
+
+.articleMain .articleMainCore .strengthNavi table tr{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.articleMain .articleMainCore .strengthNavi table tr td{
+    list-style-type: none;
+    border: solid 1px #CCCCCC;
+    border-collapse: separate;
+    border-spacing: 20px;
+    width: 200px;
+    background-color: #FAFAFA;
+    padding: 20px 15px;
+    margin: 10px;
+    display: block;    
+    text-align: center;
+    background-image: url("../images/small_mark02.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 0 center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articleMain .articleMainCore .strengthNavi table tr td:hover{
+    opacity: 0.8;
+}
+
+.articleMain .articleMainCore .strengthNavi table tr a{
+    text-decoration: none;
+    color:#0B4199;
+}
+
+.articleMain .articleMainCore .strengthNavi table tr a:hover{
+    opacity: 0.8;
+}
+
+/*企業情報*/
+.companyInfo{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.companyInfo h4{
+    border-top: solid 1px #000000;
+    border-bottom: dotted 1px #000000;
+    border-width: 1px;
+    margin-top: 90px;
+    padding: 30px 0;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.companyInfo .companyInfoDetail{
+    border-bottom: dotted 1px #000000;
+}
+
+.companyInfo .companyInfoDetail h5{
+    font-size: 16px;
+    line-height: 1.38;
+}
+
+.companyInfo .companyInfoDetail ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.companyInfo .companyInfoDetail ul li{
+    padding: 10px 32px 10px 0;
+    font-size: 14px;
+    line-height: 1.43;
+    width: 210px;
+    list-style-type: none;
+}
+
+.companyInfo .companyInfoDetail ul li a{
+    text-decoration: none;
+    color:#0B4199;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.companyInfo .companyInfoDetail ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/small_mark02.png);
+    background-size: contain;
+    vertical-align: text-bottom;
+}
+
+.companyInfo .companyInfoDetail ul a:hover{
+    text-decoration: underline;
+}
+
+.companyInfo .pageBack{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.companyInfo .pageBack a{
+    text-decoration: none;
+    margin: 50px 0;
+    color:#0B4199;
+}
+
+.companyInfo .pageBack a:hover{
+    text-decoration: underline;
+}
+
+.companyInfo .pageBack a p{
+    background-image: url(../images/small_mark03.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: 0 30px;
+}
+
+/*フォローアス*/
+.followUs{
+    display: flex;
+    justify-content: center;
+    border: solid 2px #6E6E6E;
+    border-width: 2px 0;
+    margin: 20px 0;
+    padding: 12px 0;
+}
+
+.followUs p{
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: bold;
+    padding: 5px 30px;
+}
+
+.followUs a{
+    vertical-align: top;
+    padding: 0;
+    margin: 20px;
+}
+
+.followUs a img{
+    padding: 0;
+}
+
+/*アンダーガイド*/
+.underGuide{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 100px;
+    border-bottom: solid 1px #BDBDBD;
+}
+
+.underGuide .underGuideDetail{
+    width: 310px;
+    margin-bottom: 50px;
+}
+
+.underGuide .underGuideDetail h5{
+    font-size: 16px;
+    line-height: 1.38;
+}
+
+.underGuide .underGuideDetail h5 a{
+    text-decoration: none;
+    background-image: url(../images/small_mark02.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    color: #000000;
+}
+
+.underGuide .underGuideDetail h5 a:hover{
+    text-decoration: underline;
+}
+
+.underGuide .underGuideDetail ul{
+    padding: 0;
+}
+
+.underGuide .underGuideDetail ul li{
+    
+    margin: 15px 0;
+    list-style-type: none;
+}
+
+.underGuide .underGuideDetail ul li a{
+    font-size: 14px;
+    line-height: 1.43;
+    text-decoration: none;
+    color: #000000;
+}
+
+.underGuide .underGuideDetail ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/small_mark02.png);
+    background-size: contain;
+    vertical-align: text-bottom;
+}
+
+.underGuide .underGuideDetail ul a:hover{
+    text-decoration: underline;
+}
+
+/*トップに戻るボタン*/
+.pageTop img{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/*フッター*/
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footerLinkAlign{
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.footer .footerLinkAlign ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer .footerLinkAlign ul li{
+    font-size: 12px;
+    line-height: 1;
+    list-style-type: none;
+    padding: 0 20px;
+    border-left: solid 1px #6E6E6E;
+}
+
+.footer .footerLinkAlign ul li:first-child{
+    padding-left: 0;
+    border-left: none;
+}
+
+.footer .footerLinkAlign ul li a{
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
+.footer .footerLinkAlign ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer .footerLinkAlign .copyright small{
+    font-size: 8px;
+    line-height: 1.75;
+}
