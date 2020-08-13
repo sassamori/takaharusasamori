@@ -1,15 +1,12 @@
 .fixedHead{
-    padding: 15px;
+    padding: 15px 200px;
     display: flex;
     justify-content: space-between;
-}
-
-.fixedHead .fixedHeadLeft{
-    padding: 0 100px;
+    background-color: #FFFFFF;
+    opacity: 0.8;
 }
 
 .fixedHead .fixedHeadRight{
-    padding: 0 100px;
     display: flex;
 }
 
