@@ -458,3 +458,71 @@
     line-height: 1.8;
     padding-top: 20px;
 }
+
+.articleMain .aboutMain .policy{
+    padding: 0 200px;
+}
+
+.articleMain .aboutMain .policy .underlineBold{
+    position: relative;
+}
+
+.articleMain .aboutMain .policy .underlineBold:after{
+    content: '';
+    position: absolute;
+    left: 14%;
+    bottom: -18px;
+    transform: translate(-54%);
+    width: 26%;
+    border-bottom: solid 3px #000000;
+}
+
+.articleMain .aboutMain .policy h3{
+    font-size: 26px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.articleMain .aboutMain .policy h3:after{
+    content: '';
+    position: absolute;
+    left: 52%;
+    bottom: -18px;
+    transform: translate(-52%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+
+
+.articleMain .aboutMain .policy .policyDetail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articleMain .aboutMain .policy .policyDetail ul{
+    padding: 0;
+}
+
+.articleMain .aboutMain .policy .policyDetail ul li{
+    list-style-type: none;
+    padding: 5px 0;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.articleMain .aboutMain .policy .policyDetail ul li span{
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.articleMain .aboutMain .policy .policyDetail ul li span:after{
+    content: '';
+    border-right: solid 1px #000000;
+    padding: 15px 5px;
+    margin: 5px;
+}
+
+.articleMain .aboutMain .policy .policyDetail img{
+    padding: 30px 20px;
+}
