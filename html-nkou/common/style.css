@@ -78,3 +78,66 @@
     right: 12px;
 }
 
+.upperHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    font-size: 12px;
+    background-color:#F7F7F7;
+    height: 32px;
+}
+
+.upperHead .upperHeadRight{
+    display: flex;
+    font-size: 11px;
+}
+
+.upperHead .upperHeadRight ul{
+    display: flex;
+    list-style-type: none;
+    padding: 8px 0;
+}
+
+.upperHead .upperHeadRight ul li{
+    padding: 0 10px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.upperHead .upperHeadRight ul li a{
+    color:#676767;
+}
+
+.upperHead .upperHeadRight ul li a:hover{
+    text-decoration: underline;
+}
+
+.upperHead .upperHeadRight ul li a span{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 15px;
+    background-color: #000000;
+}
+
+.upperHead .upperHeadRight a{
+    text-decoration: none;
+    color:#1F2870;
+}
+
+.upperHead .upperHeadRight a:hover{
+    text-decoration: underline;
+}
+
+.upperHead .upperHeadRight a p{
+    background-color: #D9D9D9;
+    padding: 0 8px;
+}
+
+.upperHead .upperHeadRight a p:before{
+    content: url(../images/mark3.png);
+    vertical-align: middle;
+}
