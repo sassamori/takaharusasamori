@@ -420,3 +420,41 @@
     content: '\03e';
     padding: 0 5px;
 }
+
+.articleMain .aboutMain .philosophy{
+    width: 640px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.articleMain .aboutMain .philosophy h2{
+    text-align: center;
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 1.75;
+    padding-bottom: 30px;
+}
+
+.articleMain .aboutMain .philosophy h3{
+    text-align: center;  
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+    position: relative;
+}
+
+.articleMain .aboutMain .philosophy h3:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 200px;
+    border-bottom: 1px solid #000000;
+}
+
+.articleMain .aboutMain .philosophy p{
+    font-size: 16px;
+    line-height: 1.8;
+    padding-top: 20px;
+}
