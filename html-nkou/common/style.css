@@ -309,3 +309,50 @@
     right: 12px;
 }
 
+.globalNavi .globalNaviSmall{
+    background-color: 	#181836;
+}
+
+.globalNavi .globalNaviSmall ul{
+    display: flex;
+    flex-wrap:wrap;
+    padding: 15px 210px;
+    position: relative;
+}
+
+.globalNavi .globalNaviSmall ul:before{
+    content: '\025b2';
+    top: -10px;
+    left: 270px;
+    position: absolute;
+    color:#181836;
+}
+
+.globalNavi .globalNaviSmall ul li{
+    list-style-type: none;
+    padding: 7px 3px;
+    font-size: 15px;
+}
+
+.globalNavi .globalNaviSmall ul li:before{
+    content: '\05c';
+    padding: 0 15px 0 10px;
+    color: #515171;
+    font-weight: bold;
+}
+
+.globalNavi .globalNaviSmall ul li:first-child:before{
+    content: none;
+}
+
+.globalNavi .globalNaviSmall ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 7px 3px;
+}
+
+.globalNavi .globalNaviSmall ul li a:hover{
+    background-color:#FFFFFF;
+    color:#181836;
+}
+
