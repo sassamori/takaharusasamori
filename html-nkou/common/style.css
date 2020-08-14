@@ -180,3 +180,132 @@
 .logoTelShare .logoTelShareRight .logoTelShareRightRight a{
     padding: 15px 2px;
 }
+
+.globalNavi .globalNaviMajor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li{
+    list-style-type: none;
+    text-align: center;
+    padding: 0 30px;
+    border-left: solid 1px #DCDDDD;
+    position: relative;
+    height: 35px;
+    width: 98px;
+    color: #1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:first-child{
+    pointer-events: none;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:last-child{
+    border-right: solid 1px #DCDDDD;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:hover{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a{
+    text-decoration: none;
+    color:#000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a:hover{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li span{
+    font-size: 11px;
+    color:#404885;
+    font-weight: bold;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a span{
+    font-size: 11px;
+    color: #ABB1B5;
+    font-weight: bold;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a span:hover{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight{
+    display: flex;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p{
+    width: 120px;
+    height: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border: solid 1px #000000;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a{
+    color: 	#1F2870;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_blue01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 15px;
+    right: 12px;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:hover{
+    background-color: #1F2870;
+    color: #FFFFFF;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:hover:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_white01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 15px;
+    right: 12px;
+}
+
