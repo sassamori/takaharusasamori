@@ -141,3 +141,42 @@
     content: url(../images/mark3.png);
     vertical-align: middle;
 }
+
+.logoTelShare{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 200px;
+}
+
+.logoTelShare .logoTelShareLeft{
+    padding: 0;
+}
+
+.logoTelShare .logoTelShareRight{
+    display: flex;
+    padding: 5px 0;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft{
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft img{
+    padding: 0;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft p{
+    padding: 2px 0;
+    margin: 0;
+    font-size: 11px;
+    color: #A4A4A4;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightRight{
+    padding: 25px 0 20px 15px;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightRight a{
+    padding: 15px 2px;
+}
