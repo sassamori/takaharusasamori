@@ -394,3 +394,29 @@
     color: #FFFFFF;
     font-weight: bold;
 }
+
+.articleMain .aboutMain .breadcrumb{
+    border-bottom: solid 1px#E1E1E1;
+}
+
+.articleMain .aboutMain .breadcrumb ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 10px 200px;
+    font-size: 14px;
+}
+
+.articleMain .aboutMain .breadcrumb ul li a{
+    color: 	#35538E;
+    text-decoration: none;
+}
+
+.articleMain .aboutMain .breadcrumb ul li a:hover{
+    text-decoration: underline;
+}
+
+.articleMain .aboutMain .breadcrumb ul li:first-child:after{
+    content: '\03e';
+    padding: 0 5px;
+}
