@@ -700,21 +700,24 @@
     padding: 10px 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel{
+/* ここから */
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage{
     display: flex;
     width: 1050px;
     margin: 0 auto;
     padding-top: 30px;
+    padding-bottom: 45px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight{
-    margin: 0 30px;
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight{
+    margin-left: 30px;
     position: relative;
     width: 300px;
     height: 500px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight a{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a{
     text-decoration: none;
     color: #000000;
     display: block;
@@ -725,7 +728,11 @@
     height: 100%;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .basicProgram{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a:hover{
+    opacity: 0.7;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .basicProgram{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 12px;
@@ -737,26 +744,38 @@
     margin: 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight h3{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .advancedProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 140px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight h3{
     font-size: 22px;
     font-weight: lighter;
     line-height: 1.8;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .explanation{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .explanation{
     font-size: 16px;
     letter-spacing: 0.05em;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .annotationThin{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .annotationThin{
     font-size: 12px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight span{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span{
     position: relative;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight span:before{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black01.png);
@@ -766,10 +785,103 @@
     left: 5px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight img{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore img{
     padding-left: 20px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .readMore{
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore{
+    margin-top: 45px;
+}
+
+/* 逆 */
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage{
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft{
+    margin-right: 30px;
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a:hover{
+    opacity: 0.7;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .basicProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 105px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .advancedProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 140px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft h3{
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .explanation{
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .annotationThin{
+    font-size: 12px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span{
+    position: relative;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span:before{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black01.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 12px;
+    left: 5px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore img{
+    padding-left: 20px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore{
     margin-top: 45px;
 }
