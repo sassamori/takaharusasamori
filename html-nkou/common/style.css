@@ -244,7 +244,7 @@
     font-weight: bold;
 }
 
-.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a span:hover{
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a:hover span{
     color:#1F2870;
 }
 
@@ -525,4 +525,65 @@
 
 .articleMain .aboutMain .policy .policyDetail img{
     padding: 30px 20px;
+}
+
+.articleMain .aboutMain .policy .policyDocument{
+    padding: 35px;
+}
+
+.articleMain .aboutMain .policy .policyDocument a{
+    display: flex;
+    padding: 30px;
+    background-color:#F7F7F7;
+    width: 630px;
+    margin: 0 auto;
+    border: solid 1px #DDDDDD;
+    text-decoration: none;
+}
+
+.articleMain .aboutMain .policy .policyDocument a:hover{
+    opacity: 0.8;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentLeft{
+    padding: 5px;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight{
+    padding: 15px;
+    letter-spacing: 0.3em;
+    width: 580px;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight h4{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight p{
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 1.5;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight span{
+    position: relative;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight span:after{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black01.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 12px;
+    left: 5px;
+}
+
+.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight img{
+    padding-left: 20px;
 }
