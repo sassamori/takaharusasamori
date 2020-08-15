@@ -461,6 +461,7 @@
 
 .articleMain .aboutMain .policy{
     padding: 0 200px;
+    padding-bottom: 30px;
 }
 
 .articleMain .aboutMain .policy .underlineBold{
@@ -492,8 +493,6 @@
     width: 100%;
     border-bottom: 1px solid #000000;
 }
-
-
 
 .articleMain .aboutMain .policy .policyDetail{
     display: flex;
@@ -586,4 +585,77 @@
 
 .articleMain .aboutMain .policy .policyDocument a .policyDocumentRight img{
     padding-left: 20px;
+}
+
+.articleMain .aboutMain .charm{
+    padding: 0 200px;
+}
+
+.articleMain .aboutMain .charm .underlineBold{
+    position: relative;
+}
+
+.articleMain .aboutMain .charm .underlineBold:after{
+    content: '';
+    position: absolute;
+    left: 14%;
+    bottom: -18px;
+    transform: translate(-54%);
+    width: 26%;
+    border-bottom: solid 3px #000000;
+}
+
+.articleMain .aboutMain .charm h3{
+    font-size: 26px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.articleMain .aboutMain .charm h3:after{
+    content: '';
+    position: absolute;
+    left: 52%;
+    bottom: -18px;
+    transform: translate(-52%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.articleMain .aboutMain .charm .charmDetail{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    margin: 40px 0;
+}
+
+.articleMain .aboutMain .charm .charmDetail .charmDetailText h4{
+    margin: 0;
+    font-size: 26px;
+    font-weight: lighter;
+    line-height: 1.8em;
+    position: relative;
+}
+
+.articleMain .aboutMain .charm .charmDetail .charmDetailText h4:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translate(-50%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.articleMain .aboutMain .charm .charmDetail .charmDetailText .explanation{
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+}
+
+.articleMain .aboutMain .charm .charmDetail .charmDetailText .annotationThin{
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
 }
