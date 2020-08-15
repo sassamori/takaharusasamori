@@ -659,3 +659,117 @@
     font-size: 12px;
     line-height: 1.6;
 }
+
+.articleMain .aboutSub{
+    margin: 120px 0;
+}
+
+.articleMain .aboutSub .gray{
+    background-color:#F7F7F7;
+    border: solid 1px #E2E2E2;
+}
+
+.articleMain .aboutSub .aboutSubContents{
+    padding: 50px 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead{
+    text-align: center;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead h2{
+    font-size: 34px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 200px;
+    border-bottom: 1px solid #000000;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead p{
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+    padding: 10px 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel{
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight{
+    margin: 0 30px;
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .basicProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 105px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight h3{
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .explanation{
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .annotationThin{
+    font-size: 12px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight span{
+    position: relative;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight span:before{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black01.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 12px;
+    left: 5px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight img{
+    padding-left: 20px;
+}
+
+.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallel .aboutSubContentsParallelRight .readMore{
+    margin-top: 45px;
+}
