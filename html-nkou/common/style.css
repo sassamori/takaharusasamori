@@ -898,4 +898,61 @@
     opacity: 0.7;
 }
 
-/*  */
+/* massages */
+
+.aboutSub .massages{
+    padding: 50px 150px;
+}    
+
+.aboutSub .massages table{
+    border-spacing: 60px 2rem;
+    margin: 0 auto;
+}
+
+.aboutSub .massages table td{
+    background-size: auto auto;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );    padding: 30px;
+    width: 450px;
+    height: 70px;
+    position: relative;
+}
+
+.aboutSub .massages table td a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 98%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutSub .massages table td a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .massages table td a:after{
+    content: url(../images/mark6.jpg);
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.aboutSub .massages table td a span{
+    font-size: 24px;
+    display: block;
+    padding-left: 30px;
+    width: 360px;
+    line-height: 1.5;
+}
+
+.aboutSub .massages table td a p{
+    font-size: 12px;
+    width: 360px;
+    padding-left: 30px;
+}
+
