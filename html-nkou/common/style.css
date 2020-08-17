@@ -1355,3 +1355,91 @@ footer .underGlobalNavi .underGlobalNaviList .underline{
     padding-bottom: 10px;
     border-bottom: solid 1px #C9C9C9;
 }
+
+/* rulesAndShare */
+
+footer .rulesAndShare{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 190px;
+}
+
+footer .rulesAndShare ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+footer .rulesAndShare ul li{
+    list-style-type: none;
+    padding-right: 15px;
+}
+
+footer .rulesAndShare ul li a{
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+footer .rulesAndShare ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .rulesAndShare .shareSide{
+    display: flex;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents{
+    width: 175px;
+    height: 45px;
+    position: relative;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:after{
+    content: '';
+    border-right: solid 1px #DDDDDD;
+    top: 0;
+    right: 0;
+    height: 45px;
+    position: absolute;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:before{
+    content: '\03e';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #DDDDDD;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:last-child:after{
+    content: none;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a{
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a:hover{
+    background:rgba(204,204,204,0.3);
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign p{
+    margin: 0;
+    padding: 5px;
+}
