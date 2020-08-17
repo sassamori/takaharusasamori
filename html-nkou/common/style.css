@@ -1183,10 +1183,6 @@
 
 /* その他のコンテンツ */
 
-.aboutSub .otherContents{
-    padding-bottom: 60px;
-}
-
 .aboutSub .otherContents .otherContentsHead{
     text-align: center;
     padding-top: 20px;
@@ -1247,4 +1243,54 @@
 
 .aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a p{
     font-size: 14px;
+}
+
+/* attributeNavi */
+
+footer{
+    padding: 40px 0;
+    background-color: #F8F8F8;
+}
+
+footer .attributeNavi{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 200px;
+}
+
+footer .attributeNavi .backButton{
+    padding-right: 40px;
+}
+
+footer .attributeNavi .backButton:hover{
+    opacity: 0.7;
+}
+
+footer .attributeNavi ul{
+    display: flex;
+    padding: 0;
+}
+
+footer .attributeNavi ul li{
+    list-style-type: none;
+}
+
+footer .attributeNavi ul li:after{
+    content: '|';
+    color: 	#989CBA;
+    padding: 0 12px;
+}
+
+footer .attributeNavi ul li:last-child:after{
+    content: none;
+}
+
+footer .attributeNavi ul li a{
+    color: #010067;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .attributeNavi ul li a:hover{
+    text-decoration: underline;
 }
