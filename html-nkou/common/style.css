@@ -1294,3 +1294,64 @@ footer .attributeNavi ul li a{
 footer .attributeNavi ul li a:hover{
     text-decoration: underline;
 }
+
+/* underGlobalNavi */
+
+footer .underGlobalNavi{
+    display: flex;
+    justify-content: center;
+}
+
+footer .underGlobalNavi .underGlobalNaviList{
+    width: 195px;
+    padding: 10px;
+    margin-top: 5px;
+    border-bottom: solid 1px #C9C9C9;
+    padding-bottom: 35px;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title h3 span{
+    font-size: 10px;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title{
+    text-decoration: none;
+    color: #010067;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title:hover{
+    text-decoration: underline;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title h3{
+    font-size: 16px;
+    margin: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul{
+    padding: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li{
+    list-style-type: none;
+    padding: 6px 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li:first-child{
+    padding-top: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .underline{
+    padding-bottom: 10px;
+    border-bottom: solid 1px #C9C9C9;
+}
