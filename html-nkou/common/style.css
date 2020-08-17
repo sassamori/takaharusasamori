@@ -956,3 +956,145 @@
     padding-left: 30px;
 }
 
+/* 詳細 */
+
+.aboutSub .detailMore{
+    text-align: center;
+    background-image: url(../images/markN.png);
+    background-size: 48px 48px;
+    margin-top: 80px;
+}
+
+.aboutSub .detailMore .detailMoreHead h2{
+    font-size: 22px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding-top: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul{
+    padding: 0;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 18px 60px;
+    margin: 10px 0;
+    position: relative;
+    font-size: 20px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .book a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 40px;/*画像の幅*/
+    height: 40px;/*画像の高さ*/
+    background-image: url(../images/book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .book a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 15px;/*画像の幅*/
+    height: 15px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_black01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 22px;
+    right: 8px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .talk a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 40px;/*画像の幅*/
+    height: 40px;/*画像の高さ*/
+    background-image: url(../images/book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .talk a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 15px;/*画像の幅*/
+    height: 15px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_black01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 22px;
+    right: 8px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel{
+    margin-top: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel .telTime{
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a{
+    font-size: 14px;
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0);
+    border: solid 1px #FFFFFF;
+    padding: 0;
+    margin-left: 30px;
+    position: relative;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_white01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 17px;
+    right: 8px;
+}
+
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a p{
+    padding: 0;
+}
