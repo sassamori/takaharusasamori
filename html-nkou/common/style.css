@@ -1080,6 +1080,10 @@
     position: relative;
 }
 
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a:hover{
+    text-decoration: underline;
+}
+
 .aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a:after{
     position: absolute;
     content: '';/*何も入れない*/
@@ -1175,4 +1179,72 @@
     vertical-align: middle;
     top: 12px;
     right: 7px;
+}
+
+/* その他のコンテンツ */
+
+.aboutSub .otherContents{
+    padding-bottom: 60px;
+}
+
+.aboutSub .otherContents .otherContentsHead{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.aboutSub .otherContents .otherContentsParallel{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart{
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    background-size: auto auto;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );    padding: 30px;
+    width: 450px;
+    height: 55px;
+    position: relative;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 98%;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 17px;/*画像の幅*/
+    height: 17px;/*画像の高さ*/
+    background-image: url(../images/mark6.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 43px;
+    right: 14px;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a img{
+    padding-top: 10px;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a p{
+    font-size: 14px;
 }
