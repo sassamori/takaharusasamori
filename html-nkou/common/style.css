@@ -1,3 +1,17 @@
+/* フォント */
+
+@font-face {
+    font-family: 'myfont1';
+    src: url(font/ca94208f-21dd-4dc8-ab7c-057d8dbfcccb.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'myfont2';
+    src: url(font/d226afef-6536-4b18-9b28-defffcc4baae.woff2) format('woff2');
+}
+
+/* ヘッダー */
+
 .fixedHead{
     padding: 15px 200px;
     display: flex;
@@ -138,7 +152,7 @@
 }
 
 .upperHead .upperHeadRight a p:before{
-    content: url(../images/mark3.png);
+    content: url(../images/mark9.png);
     vertical-align: middle;
 }
 
@@ -181,6 +195,8 @@
     padding: 15px 2px;
 }
 
+/* グローバルナビ */
+
 .globalNavi .globalNaviMajor{
     display: flex;
     justify-content: space-between;
@@ -203,6 +219,7 @@
     height: 35px;
     width: 98px;
     color: #1F2870;
+    font-family: 'myfont2';
 }
 
 .globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:first-child{
@@ -235,7 +252,6 @@
 .globalNavi .globalNaviMajor .globalNaviMajorLeft ul li span{
     font-size: 11px;
     color:#404885;
-    font-weight: bold;
 }
 
 .globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a span{
@@ -358,8 +374,11 @@
     color:#181836;
 }
 
+/* 記事本文 */
+
 .articleMain .aboutMain .aboutMainHead{
     position: relative;
+    font-family: 'myfont1';
 }
 
 .articleMain .aboutMain .aboutMainHead img{
@@ -378,6 +397,7 @@
     color: #FFFFFF;
     font-weight: lighter;
     position: relative;
+    letter-spacing: 0.2em;
 }
 
 .articleMain .aboutMain .aboutMainHead .aboutMainHeadText h1:after{
@@ -661,7 +681,7 @@
 }
 
 .articleMain .aboutSub{
-    margin: 120px 0;
+    margin-top: 120px;
 }
 
 .articleMain .aboutSub .gray{
@@ -1191,6 +1211,7 @@
 .aboutSub .otherContents .otherContentsParallel{
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart{
@@ -1248,7 +1269,7 @@
 /* attributeNavi */
 
 footer{
-    padding: 40px 0;
+    padding: 0;
     background-color: #F8F8F8;
 }
 
@@ -1442,4 +1463,39 @@ footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign{
 footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign p{
     margin: 0;
     padding: 5px;
+}
+
+/* copyright */
+
+footer .copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 190px;
+    background-color: #1A1A1A;
+    font-family: 'myfont2';
+}
+
+footer .copyright a{
+    color: 	#999999;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+footer .copyright a:hover{
+    text-decoration: underline;
+}
+
+footer .copyright .institute{
+    color: 	#999999;
+    font-size: 11px;
+    position: relative;
+}
+
+footer .copyright .institute:before{
+    content: '\0a9';
+    position: absolute;
+    top: -3px;
+    left: -14px;
+    font-size: 16px;
 }
