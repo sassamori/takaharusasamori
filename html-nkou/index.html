@@ -13,20 +13,41 @@
     <meta property="og:image" content="https://github.com/sassamori/takaharusasamori/blob/feature/html01/html-nkou/images/campus_photo_01.jpg?raw=true" />
     <link rel="stylesheet" href="common/normalize.css">
     <link rel="stylesheet" href="common/style.css">
+    <script src="common/js/jquery-3.5.1.min.js"></script>
+    <script>
+        //scroll fix header
+        $(function () {
+            "use strict";
+            var flag = "view";
+        
+          $(window).on("scroll", function () {
+            // scrollTop()が「200」より大きい場合
+           //画面トップから、ナビゲーションメニューまでの高さ（ピクセル）を指定すれば、メニュースクロールで
+           //消えていくタイミングでヘッダが表示されて固定される。  
+            
+            if ($(this).scrollTop() > 185) {
+              if (flag === "view") {
+                $(".fixedHead").stop().css({opacity: '1.0'}).animate({
+           //”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+                  top: 0
+                }, 500);
+        
+                flag = "hide";
+              }
+            } else {
+              if (flag === "hide") {
+                $(".fixedHead").stop().animate({top:"-66px",opacity: 0}, 500);
+                //上にあがり切ったら透過度を0%にして背景が生きるように
+                　　　　//”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+                flag = "view";
+              }
+            }
+          });
+        });
+    </script>
 </head>
 <body>
     <header>
-        <nav class="fixedHead">
-            <div class="fixedHeadLeft">
-                <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="165" height="35"></a>
-            </div>
-            <div class="fixedHeadRight">
-                <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="200" height="22">
-                <span>受付時間<br>平日10:00～19:00</span>
-                <p><a href="#">説明会・相談会</a></p>
-                <p><a href="#">資料請求</a></p>
-            </div>
-        </nav>
         <nav class="upperHead">
             <p>KADOKAWAが創る新しいネットの高校</p>
             <div class="upperHeadRight">
@@ -90,6 +111,17 @@
                     <li><a href="#">動画一覧</a></li>
                     <li><a href="#">学費</a></li>
                 </ul>
+            </div>
+        </nav>
+        <nav class="fixedHead">
+            <div class="fixedHeadLeft">
+                <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="165" height="35"></a>
+            </div>
+            <div class="fixedHeadRight">
+                <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="200" height="22">
+                <span>受付時間<br>平日10:00～19:00</span>
+                <p><a href="#">説明会・相談会</a></p>
+                <p><a href="#">資料請求</a></p>
             </div>
         </nav>
     </header>

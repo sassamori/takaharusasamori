@@ -13,10 +13,14 @@
 /* ヘッダー */
 
 .fixedHead{
-    padding: 15px 200px;
+    padding: 10px 200px;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    opacity:0;/* 	最初読み込んだときは透過 */
+    z-index: 1000;/*　他のアイテムに対して最上位のレイヤーになるように */
+    width: 74%;
 }
 
 .fixedHead .fixedHeadRight{
@@ -1277,6 +1281,7 @@ footer .attributeNavi{
     display: flex;
     justify-content: space-between;
     padding: 0 200px;
+    padding-top: 30px;
 }
 
 footer .attributeNavi .backButton{
@@ -1387,6 +1392,7 @@ footer .rulesAndShare{
 
 footer .rulesAndShare ul{
     display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
