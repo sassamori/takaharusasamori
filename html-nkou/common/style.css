@@ -380,23 +380,23 @@
 
 /* 記事本文 */
 
-.articleMain .aboutMain .aboutMainHead{
+.aboutMain .aboutMainHead{
     position: relative;
     font-family: 'myfont1';
 }
 
-.articleMain .aboutMain .aboutMainHead img{
+.aboutMain .aboutMainHead img{
     object-fit: cover;
 }
 
-.articleMain .aboutMain .aboutMainHead .aboutMainHeadText{
+.aboutMain .aboutMainHead .aboutMainHeadText{
     position: absolute;
     top: 10px;
     left: 540px;
     text-align: center;
 }
 
-.articleMain .aboutMain .aboutMainHead .aboutMainHeadText h1{
+.aboutMain .aboutMainHead .aboutMainHeadText h1{
     font-size: 60px;
     color: #FFFFFF;
     font-weight: lighter;
@@ -404,7 +404,7 @@
     letter-spacing: 0.2em;
 }
 
-.articleMain .aboutMain .aboutMainHead .aboutMainHeadText h1:after{
+.aboutMain .aboutMainHead .aboutMainHeadText h1:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -414,16 +414,16 @@
     border-bottom: 1px solid #FFFFFF;
 }
 
-.articleMain .aboutMain .aboutMainHead .aboutMainHeadText p{
+.aboutMain .aboutMainHead .aboutMainHeadText p{
     color: #FFFFFF;
     font-weight: bold;
 }
 
-.articleMain .aboutMain .breadcrumb{
+.aboutMain .breadcrumb{
     border-bottom: solid 1px#E1E1E1;
 }
 
-.articleMain .aboutMain .breadcrumb ul{
+.aboutMain .breadcrumb ul{
     display: flex;
     justify-content: flex-start;
     list-style-type: none;
@@ -431,27 +431,27 @@
     font-size: 14px;
 }
 
-.articleMain .aboutMain .breadcrumb ul li a{
+.aboutMain .breadcrumb ul li a{
     color: 	#35538E;
     text-decoration: none;
 }
 
-.articleMain .aboutMain .breadcrumb ul li a:hover{
+.aboutMain .breadcrumb ul li a:hover{
     text-decoration: underline;
 }
 
-.articleMain .aboutMain .breadcrumb ul li:first-child:after{
+.aboutMain .breadcrumb ul li:first-child:after{
     content: '\03e';
     padding: 0 5px;
 }
 
-.articleMain .aboutMain .philosophy{
+.aboutMain .philosophy{
     width: 640px;
     margin: 0 auto;
     padding: 50px 0;
 }
 
-.articleMain .aboutMain .philosophy h2{
+.aboutMain .philosophy h2{
     text-align: center;
     font-size: 36px;
     font-weight: lighter;
@@ -459,7 +459,7 @@
     padding-bottom: 30px;
 }
 
-.articleMain .aboutMain .philosophy h3{
+.aboutMain .philosophy h3{
     text-align: center;  
     font-size: 22px;
     font-weight: lighter;
@@ -467,7 +467,7 @@
     position: relative;
 }
 
-.articleMain .aboutMain .philosophy h3:after{
+.aboutMain .philosophy h3:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -477,22 +477,22 @@
     border-bottom: 1px solid #000000;
 }
 
-.articleMain .aboutMain .philosophy p{
+.aboutMain .philosophy p{
     font-size: 16px;
     line-height: 1.8;
     padding-top: 20px;
 }
 
-.articleMain .aboutMain .policy{
+.aboutMain .policy{
     padding: 0 200px;
     padding-bottom: 30px;
 }
 
-.articleMain .aboutMain .policy .underlineBold{
+.aboutMain .policy .underlineBold{
     position: relative;
 }
 
-.articleMain .aboutMain .policy .underlineBold:after{
+.aboutMain .policy .underlineBold:after{
     content: '';
     position: absolute;
     left: 14%;
@@ -502,13 +502,13 @@
     border-bottom: solid 3px #000000;
 }
 
-.articleMain .aboutMain .policy h3{
+.aboutMain .policy h3{
     font-size: 26px;
     font-weight: lighter;
     position: relative;
 }
 
-.articleMain .aboutMain .policy h3:after{
+.aboutMain .policy h3:after{
     content: '';
     position: absolute;
     left: 52%;
@@ -518,43 +518,43 @@
     border-bottom: 1px solid #000000;
 }
 
-.articleMain .aboutMain .policy .policyDetail{
+.aboutMain .policy .policyDetail{
     display: flex;
     justify-content: space-between;
 }
 
-.articleMain .aboutMain .policy .policyDetail ul{
+.aboutMain .policy .policyDetail ul{
     padding: 0;
 }
 
-.articleMain .aboutMain .policy .policyDetail ul li{
+.aboutMain .policy .policyDetail ul li{
     list-style-type: none;
     padding: 5px 0;
     margin: 40px 0;
     font-size: 20px;
 }
 
-.articleMain .aboutMain .policy .policyDetail ul li span{
+.aboutMain .policy .policyDetail ul li span{
     font-size: 26px;
     margin-right: 10px;
 }
 
-.articleMain .aboutMain .policy .policyDetail ul li span:after{
+.aboutMain .policy .policyDetail ul li span:after{
     content: '';
     border-right: solid 1px #000000;
     padding: 15px 5px;
     margin: 5px;
 }
 
-.articleMain .aboutMain .policy .policyDetail img{
+.aboutMain .policy .policyDetail img{
     padding: 30px 20px;
 }
 
-.articleMain .aboutMain .policy .policyDocument{
+.aboutMain .policy .policyDocument{
     padding: 35px;
 }
 
-.articleMain .aboutMain .policy .policyDocument a{
+.aboutMain .policy .policyDocument a{
     display: flex;
     padding: 30px;
     background-color:#F7F7F7;
@@ -564,21 +564,21 @@
     text-decoration: none;
 }
 
-.articleMain .aboutMain .policy .policyDocument a:hover{
+.aboutMain .policy .policyDocument a:hover{
     opacity: 0.8;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentLeft{
+.aboutMain .policy .policyDocument a .policyDocumentLeft{
     padding: 5px;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight{
+.aboutMain .policy .policyDocument a .policyDocumentRight{
     padding: 15px;
     letter-spacing: 0.3em;
     width: 580px;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight h4{
+.aboutMain .policy .policyDocument a .policyDocumentRight h4{
     color: #000000;
     padding: 0;
     margin: 0;
@@ -586,18 +586,18 @@
     font-weight: lighter;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight p{
+.aboutMain .policy .policyDocument a .policyDocumentRight p{
     color: #000000;
     padding-top: 10px;
     padding-bottom: 15px;
     line-height: 1.5;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight span{
+.aboutMain .policy .policyDocument a .policyDocumentRight span{
     position: relative;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight span:after{
+.aboutMain .policy .policyDocument a .policyDocumentRight span:after{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black01.png);
@@ -607,19 +607,19 @@
     left: 5px;
 }
 
-.articleMain .aboutMain .policy .policyDocument a .policyDocumentRight img{
+.aboutMain .policy .policyDocument a .policyDocumentRight img{
     padding-left: 20px;
 }
 
-.articleMain .aboutMain .charm{
+.aboutMain .charm{
     padding: 0 200px;
 }
 
-.articleMain .aboutMain .charm .underlineBold{
+.aboutMain .charm .underlineBold{
     position: relative;
 }
 
-.articleMain .aboutMain .charm .underlineBold:after{
+.aboutMain .charm .underlineBold:after{
     content: '';
     position: absolute;
     left: 14%;
@@ -629,13 +629,13 @@
     border-bottom: solid 3px #000000;
 }
 
-.articleMain .aboutMain .charm h3{
+.aboutMain .charm h3{
     font-size: 26px;
     font-weight: lighter;
     position: relative;
 }
 
-.articleMain .aboutMain .charm h3:after{
+.aboutMain .charm h3:after{
     content: '';
     position: absolute;
     left: 52%;
@@ -645,14 +645,14 @@
     border-bottom: 1px solid #000000;
 }
 
-.articleMain .aboutMain .charm .charmDetail{
+.aboutMain .charm .charmDetail{
     display: flex;
     justify-content: space-between;
     padding-top: 70px;
     margin: 40px 0;
 }
 
-.articleMain .aboutMain .charm .charmDetail .charmDetailText h4{
+.aboutMain .charm .charmDetail .charmDetailText h4{
     margin: 0;
     font-size: 26px;
     font-weight: lighter;
@@ -660,7 +660,7 @@
     position: relative;
 }
 
-.articleMain .aboutMain .charm .charmDetail .charmDetailText h4:after{
+.aboutMain .charm .charmDetail .charmDetailText h4:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -670,7 +670,7 @@
     border-bottom: 1px solid #000000;
 }
 
-.articleMain .aboutMain .charm .charmDetail .charmDetailText .explanation{
+.aboutMain .charm .charmDetail .charmDetailText .explanation{
     margin: 0;
     padding-top: 40px;
     padding-bottom: 30px;
@@ -678,36 +678,36 @@
     line-height: 1.6;
 }
 
-.articleMain .aboutMain .charm .charmDetail .charmDetailText .annotationThin{
+.aboutMain .charm .charmDetail .charmDetailText .annotationThin{
     margin: 0;
     font-size: 12px;
     line-height: 1.6;
 }
 
-.articleMain .aboutSub{
+.aboutSub{
     margin-top: 120px;
 }
 
-.articleMain .aboutSub .gray{
+.aboutSub .gray{
     background-color:#F7F7F7;
     border: solid 1px #E2E2E2;
 }
 
-.articleMain .aboutSub .aboutSubContents{
+.aboutSub .aboutSubContents{
     padding: 50px 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead{
+.aboutSub .aboutSubContents .aboutSubContentsHead{
     text-align: center;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead h2{
+.aboutSub .aboutSubContents .aboutSubContentsHead h2{
     font-size: 34px;
     font-weight: lighter;
     position: relative;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead h2:after{
+.aboutSub .aboutSubContents .aboutSubContentsHead h2:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -717,7 +717,7 @@
     border-bottom: 1px solid #000000;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsHead p{
+.aboutSub .aboutSubContents .aboutSubContentsHead p{
     font-size: 16px;
     letter-spacing: 0.15em;
     line-height: 1.8;
@@ -726,7 +726,7 @@
 
 /* ここから */
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage{
     display: flex;
     width: 1050px;
     margin: 0 auto;
@@ -734,14 +734,14 @@
     padding-bottom: 45px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight{
     margin-left: 30px;
     position: relative;
     width: 300px;
     height: 500px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a{
     text-decoration: none;
     color: #000000;
     display: block;
@@ -752,11 +752,11 @@
     height: 100%;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a:hover{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a:hover{
     opacity: 0.7;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .basicProgram{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .basicProgram{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 12px;
@@ -768,7 +768,7 @@
     margin: 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .advancedProgram{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .advancedProgram{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 12px;
@@ -780,26 +780,26 @@
     margin: 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight h3{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight h3{
     font-size: 22px;
     font-weight: lighter;
     line-height: 1.8;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .explanation{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .explanation{
     font-size: 16px;
     letter-spacing: 0.05em;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .annotationThin{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .annotationThin{
     font-size: 12px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span{
     position: relative;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black01.png);
@@ -809,17 +809,17 @@
     left: 5px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore img{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore img{
     padding-left: 20px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore{
     margin-top: 45px;
 }
 
 /* 逆 */
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage{
     display: flex;
     width: 1050px;
     margin: 0 auto;
@@ -827,14 +827,14 @@
     padding-bottom: 45px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft{
     margin-right: 30px;
     position: relative;
     width: 300px;
     height: 500px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a{
     text-decoration: none;
     color: #000000;
     display: block;
@@ -845,11 +845,11 @@
     height: 100%;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a:hover{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a:hover{
     opacity: 0.7;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .basicProgram{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .basicProgram{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 12px;
@@ -861,7 +861,7 @@
     margin: 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .advancedProgram{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .advancedProgram{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 12px;
@@ -873,26 +873,26 @@
     margin: 0;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft h3{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft h3{
     font-size: 22px;
     font-weight: lighter;
     line-height: 1.8;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .explanation{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .explanation{
     font-size: 16px;
     letter-spacing: 0.05em;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .annotationThin{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .annotationThin{
     font-size: 12px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span{
     position: relative;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black01.png);
@@ -902,11 +902,11 @@
     left: 5px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore img{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore img{
     padding-left: 20px;
 }
 
-.articleMain .aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore{
     margin-top: 45px;
 }
 
