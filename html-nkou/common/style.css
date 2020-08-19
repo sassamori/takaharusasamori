@@ -1411,7 +1411,9 @@ footer .underGlobalNavi .underGlobalNaviList .underline{
 footer .rulesAndShare{
     display: flex;
     justify-content: space-between;
-    padding: 30px 190px;
+    margin: 0 auto;
+    width: 1050px;
+    padding: 20px 0;
 }
 
 footer .rulesAndShare ul{
@@ -1497,32 +1499,37 @@ footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign p{
 
 /* copyright */
 
-footer .copyright{
+footer .copyrightBackground{
+    background-color: #1A1A1A;
+}
+
+footer .copyrightBackground .copyright{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 190px;
-    background-color: #1A1A1A;
+    margin: 0 auto;
+    width: 1050px;
+    padding: 10px 0;
     font-family: 'myfont2';
 }
 
-footer .copyright a{
+footer .copyrightBackground .copyright a{
     color: 	#999999;
     font-size: 11px;
     text-decoration: none;
 }
 
-footer .copyright a:hover{
+footer .copyrightBackground .copyright a:hover{
     text-decoration: underline;
 }
 
-footer .copyright .institute{
+footer .copyrightBackground .copyright .institute{
     color: 	#999999;
     font-size: 11px;
     position: relative;
 }
 
-footer .copyright .institute:before{
+footer .copyrightBackground .copyright .institute:before{
     content: '\0a9';
     position: absolute;
     top: -3px;
