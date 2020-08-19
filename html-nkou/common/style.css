@@ -1,5 +1,9 @@
 /* フォント */
 
+body{
+    font-family: sans-serif;
+}
+
 @font-face {
     font-family: 'myfont1';
     src: url(font/ca94208f-21dd-4dc8-ab7c-057d8dbfcccb.woff2) format('woff2');
@@ -936,8 +940,15 @@
 
 /* massages */
 
-.aboutSub .massages{
-    padding: 50px 150px;
+.aboutSub .massagesBackground{
+    background-color:#F7F7F7;
+    border-top: solid 1px #E2E2E2;
+}
+
+.aboutSub .massagesBackground .massages{
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 1000px;
 }    
 
 .aboutSub .massages table{
