@@ -27,7 +27,7 @@
             
             if ($(this).scrollTop() > 185) {
               if (flag === "view") {
-                $(".fixedHead").stop().css({opacity: '1.0'}).animate({
+                $(".fixedHeadBackground").stop().css({opacity: '1.0'}).animate({
            //”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
                   top: 0
                 }, 500);
@@ -36,7 +36,7 @@
               }
             } else {
               if (flag === "hide") {
-                $(".fixedHead").stop().animate({top:"-66px",opacity: 0}, 500);
+                $(".fixedHeadBackground").stop().animate({top:"-66px",opacity: 0}, 500);
                 //上にあがり切ったら透過度を0%にして背景が生きるように
                 　　　　//”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
                 flag = "view";
@@ -48,19 +48,21 @@
 </head>
 <body>
     <header>
-        <nav class="fixedHead">
-            <div class="fixedHeadLeft">
-                <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="165" height="35"></a>
-            </div>
-            <div class="fixedHeadRight">
-                <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="200" height="22">
-                <span>受付時間<br>平日10:00～19:00</span>
-                <p><a href="#">説明会・相談会</a></p>
-                <p><a href="#">資料請求</a></p>
-            </div>
-        </nav>
-        <nav class="upperHeadBackground">
-            <div class="upperHead">
+        <div class="fixedHeadBackground">
+            <nav class="fixedHead">
+                <div class="fixedHeadLeft">
+                    <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="165" height="35"></a>
+                </div>
+                <div class="fixedHeadRight">
+                    <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="200" height="22">
+                    <span>受付時間<br>平日10:00～19:00</span>
+                    <p><a href="#">説明会・相談会</a></p>
+                    <p><a href="#">資料請求</a></p>
+                </div>
+            </nav>
+        </div>
+        <div class="upperHeadBackground">
+            <nav class="upperHead">
                 <p>KADOKAWAが創る新しいネットの高校</p>
                 <div class="upperHeadRight">
                     <ul>
@@ -74,8 +76,8 @@
                     <a href="#"><p>生徒用ログイン</p></a>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <section class="logoTelShare">
             <div class="logoTelShareLeft">
                 <a href="#"><h1><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="200" height="45"></h1></a>
