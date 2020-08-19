@@ -823,10 +823,10 @@ body{
 .aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore span:before{
     position: absolute;
     display: inline-block;
-    content: url(../images/icon_arrow01_right_black01.png);
+    content: url(../images/icon_arrow01_right_black02.png);
     width: 5px;/*画像の幅*/
     height: 5px;/*画像の高さ*/
-    bottom: 12px;
+    bottom: 15px;
     left: 5px;
 }
 
@@ -909,17 +909,17 @@ body{
     font-size: 12px;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore span{
     position: relative;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore span:before{
     position: absolute;
     display: inline-block;
-    content: url(../images/icon_arrow01_right_black01.png);
+    content: url(../images/icon_arrow01_right_black02.png);
     width: 5px;/*画像の幅*/
     height: 5px;/*画像の高さ*/
-    bottom: 12px;
+    bottom: 15px;
     left: 5px;
 }
 
