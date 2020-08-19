@@ -205,7 +205,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 200px;
+    width: 1050px;
+    margin: 0 auto;
 }
 
 .globalNavi .globalNaviMajor .globalNaviMajorLeft ul{
@@ -336,7 +337,9 @@
 .globalNavi .globalNaviSmall ul{
     display: flex;
     flex-wrap:wrap;
-    padding: 15px 210px;
+    width: 1050px;
+    padding: 15px 0;
+    margin: 0 auto;
     position: relative;
     margin-bottom: 0;
     margin-top: 20px;
@@ -392,7 +395,7 @@
 .aboutMain .aboutMainHead .aboutMainHeadText{
     position: absolute;
     top: 10px;
-    left: 540px;
+    left: 35%;
     text-align: center;
 }
 
@@ -484,7 +487,8 @@
 }
 
 .aboutMain .policy{
-    padding: 0 200px;
+    margin: 0 auto;
+    width: 1050px;
     padding-bottom: 30px;
 }
 
@@ -1280,7 +1284,8 @@ footer{
 footer .attributeNavi{
     display: flex;
     justify-content: space-between;
-    padding: 0 200px;
+    margin: 0 auto;
+    width: 1050px;
     padding-top: 30px;
 }
 
