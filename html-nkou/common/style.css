@@ -816,11 +816,11 @@ body{
     font-size: 12px;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore span{
     position: relative;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore span:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black01.png);
