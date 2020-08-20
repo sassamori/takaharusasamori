@@ -613,17 +613,17 @@ body{
     line-height: 1.5;
 }
 
-.aboutMain .policy .policyDocument a .policyDocumentRight span{
+.aboutMain .policy .policyDocument a .policyDocumentRight .inequalitySignIcon{
     position: relative;
 }
 
-.aboutMain .policy .policyDocument a .policyDocumentRight span:after{
+.aboutMain .policy .policyDocument a .policyDocumentRight .inequalitySignIcon:after{
     position: absolute;
     display: inline-block;
-    content: url(../images/icon_arrow01_right_black01.png);
+    content: url(../images/icon_arrow01_right_black02.png);
     width: 5px;/*画像の幅*/
     height: 5px;/*画像の高さ*/
-    bottom: 12px;
+    bottom: 15px;
     left: 5px;
 }
 
