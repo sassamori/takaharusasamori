@@ -816,11 +816,11 @@ body{
     font-size: 12px;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore .inequalitySignIcon{
     position: relative;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore .inequalitySignIcon:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black02.png);
@@ -909,11 +909,11 @@ body{
     font-size: 12px;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore span{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore .inequalitySignIcon{
     position: relative;
 }
 
-.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore span:before{
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore .inequalitySignIcon:before{
     position: absolute;
     display: inline-block;
     content: url(../images/icon_arrow01_right_black02.png);
