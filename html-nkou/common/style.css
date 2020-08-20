@@ -362,7 +362,7 @@ body{
 .globalNavi .globalNaviSmall ul:before{
     content: '\025b2';
     top: -10px;
-    left: 270px;
+    left: 6.5%;
     position: absolute;
     color:#181836;
 }
