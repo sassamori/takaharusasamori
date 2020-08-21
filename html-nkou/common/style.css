@@ -409,7 +409,9 @@ body{
 .aboutMain .aboutMainHead .aboutMainHeadText{
     position: absolute;
     top: 10px;
-    left: 33%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
