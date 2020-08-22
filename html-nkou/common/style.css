@@ -933,7 +933,8 @@ body{
 .aboutSub .massages table td{
     background-size: auto auto;
     background-color: rgba(255, 255, 255, 1);
-    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );    padding: 30px;
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );
+    padding: 30px;
     width: 450px;
     height: 70px;
     position: relative;
@@ -1207,11 +1208,11 @@ body{
 
 .aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart{
     text-align: center;
-    padding: 20px;
     margin: 15px;
     background-size: auto auto;
     background-color: rgba(255, 255, 255, 1);
-    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );    padding: 30px;
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );
+    padding: 30px;
     width: 450px;
     height: 55px;
     position: relative;
