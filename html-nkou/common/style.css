@@ -1,0 +1,1503 @@
+/* フォント */
+
+body{
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'myfont1';
+    src: url(font/ca94208f-21dd-4dc8-ab7c-057d8dbfcccb.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'myfont2';
+    src: url(font/d226afef-6536-4b18-9b28-defffcc4baae.woff2) format('woff2');
+}
+
+/* ヘッダー */
+
+.fixedHeadBackground{
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    opacity:0;/* 	最初読み込んだときは透過 */
+    z-index: 1000;/*　他のアイテムに対して最上位のレイヤーになるように */
+    width: 100%;
+}
+
+.fixedHead{
+    width: 1050px;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fixedHead .fixedHeadRight{
+    display: flex;
+}
+
+.fixedHead .fixedHeadRight img{
+    margin-top: 5px;
+}
+
+.fixedHead .fixedHeadRight span{
+    font-size: 12px;
+    line-height: 1.5;
+    width: 105px;
+    padding: 0 10px;
+    color: #A4A4A4;
+}
+
+.fixedHead .fixedHeadRight p{
+    width: 120px;
+    height: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border: solid 1px #000000;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.fixedHead .fixedHeadRight p a{
+    color: 	#1F2870;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.fixedHead .fixedHeadRight p a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_blue01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 15px;
+    right: 12px;
+}
+
+.fixedHead .fixedHeadRight p a:hover{
+    background-color: #1F2870;
+    color: #FFFFFF;
+}
+
+.fixedHead .fixedHeadRight p a:hover:before{
+    background-image: url(../images/icon_arrow01_right_white01.png);
+}
+
+.upperHeadBackground{
+    background-color:#F7F7F7;
+}
+
+.upperHeadBackground .upperHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1050px;
+    font-size: 12px;
+    height: 32px;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight{
+    display: flex;
+    font-size: 11px;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight ul{
+    display: flex;
+    list-style-type: none;
+    padding: 8px 0;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight ul li{
+    padding: 0 10px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight ul li a{
+    color:#676767;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight ul li a:hover{
+    text-decoration: underline;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight ul li a span{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 15px;
+    background-color: #000000;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight a{
+    text-decoration: none;
+    color:#1F2870;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight a:hover{
+    text-decoration: underline;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight a p{
+    background-color: #D9D9D9;
+    padding: 0 8px;
+}
+
+.upperHeadBackground .upperHead .upperHeadRight a p:before{
+    content: url(../images/mark9.png);
+    vertical-align: middle;
+}
+
+.logoTelShare{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1050px;
+}
+
+.logoTelShare .logoTelShareLeft{
+    padding: 0;
+}
+
+.logoTelShare .logoTelShareRight{
+    display: flex;
+    padding: 5px 0;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft{
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft img{
+    padding: 0;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightLeft p{
+    padding: 2px 0;
+    margin: 0;
+    font-size: 11px;
+    color: #A4A4A4;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightRight{
+    padding: 25px 0 20px 15px;
+}
+
+.logoTelShare .logoTelShareRight .logoTelShareRightRight a{
+    padding: 15px 2px;
+}
+
+/* グローバルナビ */
+
+.globalNavi .globalNaviMajor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li{
+    list-style-type: none;
+    text-align: center;
+    padding: 0 30px;
+    border-left: solid 1px #DCDDDD;
+    position: relative;
+    height: 35px;
+    width: 98px;
+    color: #1F2870;
+    font-family: 'myfont2';
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:first-child{
+    pointer-events: none;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:last-child{
+    border-right: solid 1px #DCDDDD;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li:hover{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a{
+    text-decoration: none;
+    color:#000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a:hover{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li span{
+    font-size: 11px;
+    color:#404885;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a span{
+    font-size: 11px;
+    color: #ABB1B5;
+    font-weight: bold;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorLeft ul li a:hover span{
+    color:#1F2870;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight{
+    display: flex;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p{
+    width: 120px;
+    height: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border: solid 1px #000000;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a{
+    color: 	#1F2870;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_blue01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 15px;
+    right: 12px;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:hover{
+    background-color: #1F2870;
+    color: #FFFFFF;
+}
+
+.globalNavi .globalNaviMajor .globalNaviMajorRight p a:hover:before{
+    background-image: url(../images/icon_arrow01_right_white01.png);
+}
+
+.globalNavi .globalNaviSmall{
+    background-color: 	#181836;
+}
+
+.globalNavi .globalNaviSmall ul{
+    display: flex;
+    flex-wrap:wrap;
+    width: 1050px;
+    padding: 15px 0;
+    margin: 20px auto 0 auto;
+    position: relative;
+}
+
+.globalNavi .globalNaviSmall ul:before{
+    content: '\025b2';
+    top: -10px;
+    left: 6.5%;
+    position: absolute;
+    color:#181836;
+}
+
+.globalNavi .globalNaviSmall ul li{
+    list-style-type: none;
+    padding: 7px 3px;
+    font-size: 15px;
+}
+
+.globalNavi .globalNaviSmall ul li:before{
+    content: '\05c';
+    padding: 0 15px 0 10px;
+    color: #515171;
+    font-weight: bold;
+}
+
+.globalNavi .globalNaviSmall ul li:first-child:before{
+    content: none;
+}
+
+.globalNavi .globalNaviSmall ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 7px 3px;
+}
+
+.globalNavi .globalNaviSmall ul li a:hover{
+    background-color:#FFFFFF;
+    color:#181836;
+}
+
+/* 記事本文 */
+
+.aboutMain .aboutMainHead{
+    position: relative;
+    font-family: 'myfont1';
+}
+
+.aboutMain .aboutMainHead img{
+    object-fit: cover;
+}
+
+.aboutMain .aboutMainHead .aboutMainHeadText{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.aboutMain .aboutMainHead .aboutMainHeadText h1{
+    font-size: 60px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    position: relative;
+    letter-spacing: 0.2em;
+}
+
+.aboutMain .aboutMainHead .aboutMainHeadText h1:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 200px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.aboutMain .aboutMainHead .aboutMainHeadText p{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.aboutMain .breadcrumb{
+    border-bottom: solid 1px#E1E1E1;
+}
+
+.aboutMain .breadcrumb ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 1050px;
+    font-size: 14px;
+}
+
+.aboutMain .breadcrumb ul li a{
+    color: 	#35538E;
+    text-decoration: none;
+}
+
+.aboutMain .breadcrumb ul li a:hover{
+    text-decoration: underline;
+}
+
+.aboutMain .breadcrumb ul li:first-child:after{
+    content: '\03e';
+    padding: 0 5px;
+}
+
+.aboutMain .philosophy{
+    width: 640px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.aboutMain .philosophy h2{
+    text-align: center;
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 1.75;
+    padding-bottom: 30px;
+}
+
+.aboutMain .philosophy h3{
+    text-align: center;  
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+    position: relative;
+}
+
+.aboutMain .philosophy h3:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 200px;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutMain .philosophy p{
+    font-size: 16px;
+    line-height: 1.8;
+    padding-top: 20px;
+}
+
+.aboutMain .policy{
+    margin: 0 auto;
+    width: 1050px;
+    padding-bottom: 30px;
+}
+
+.aboutMain .policy .underlineBold{
+    position: relative;
+}
+
+.aboutMain .policy .underlineBold:after{
+    content: '';
+    position: absolute;
+    left: 14%;
+    bottom: -18px;
+    transform: translate(-54%);
+    width: 26%;
+    border-bottom: solid 3px #000000;
+}
+
+.aboutMain .policy h3{
+    font-size: 26px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.aboutMain .policy h3:after{
+    content: '';
+    position: absolute;
+    left: 52%;
+    bottom: -18px;
+    transform: translate(-52%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutMain .policy .policyDetail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutMain .policy .policyDetail ul{
+    padding: 0;
+}
+
+.aboutMain .policy .policyDetail ul li{
+    list-style-type: none;
+    padding: 5px 0;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.aboutMain .policy .policyDetail ul li span{
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.aboutMain .policy .policyDetail ul li span:after{
+    content: '';
+    border-right: solid 1px #000000;
+    padding: 15px 5px;
+    margin: 5px;
+}
+
+.aboutMain .policy .policyDetail img{
+    padding: 30px 20px;
+}
+
+.aboutMain .policy .policyDocument{
+    padding: 35px;
+}
+
+.aboutMain .policy .policyDocument a{
+    display: flex;
+    padding: 30px;
+    background-color:#F7F7F7;
+    width: 630px;
+    margin: 0 auto;
+    border: solid 1px #DDDDDD;
+    text-decoration: none;
+}
+
+.aboutMain .policy .policyDocument a:hover{
+    opacity: 0.8;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentLeft{
+    padding: 5px;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight{
+    padding: 15px;
+    letter-spacing: 0.3em;
+    width: 580px;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight h4{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight p{
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 1.5;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight .inequalitySignIcon{
+    position: relative;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight .inequalitySignIcon:after{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black02.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 15px;
+    left: 5px;
+}
+
+.aboutMain .policy .policyDocument a .policyDocumentRight img{
+    padding-left: 20px;
+}
+
+.aboutMain .charm{
+    margin: 0 auto;
+    width: 1050px;
+}
+
+.aboutMain .charm .underlineBold{
+    position: relative;
+}
+
+.aboutMain .charm .underlineBold:after{
+    content: '';
+    position: absolute;
+    left: 14%;
+    bottom: -18px;
+    transform: translate(-54%);
+    width: 26%;
+    border-bottom: solid 3px #000000;
+}
+
+.aboutMain .charm h3{
+    font-size: 26px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.aboutMain .charm h3:after{
+    content: '';
+    position: absolute;
+    left: 52%;
+    bottom: -18px;
+    transform: translate(-52%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutMain .charm .charmDetail{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    margin: 40px 0;
+}
+
+.aboutMain .charm .charmDetail .charmDetailText h4{
+    margin: 0;
+    font-size: 26px;
+    font-weight: lighter;
+    line-height: 1.8em;
+    position: relative;
+}
+
+.aboutMain .charm .charmDetail .charmDetailText h4:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translate(-50%);
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutMain .charm .charmDetail .charmDetailText .explanation{
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+}
+
+.aboutMain .charm .charmDetail .charmDetailText .annotationThin{
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.aboutSub{
+    margin-top: 120px;
+}
+
+.aboutSub .gray{
+    background-color:#F7F7F7;
+    border: solid 1px #E2E2E2;
+}
+
+.aboutSub .aboutSubContents{
+    padding: 50px 0;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsHead{
+    text-align: center;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsHead h2{
+    font-size: 34px;
+    font-weight: lighter;
+    position: relative;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsHead h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 200px;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsHead p{
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+    padding: 10px 0;
+}
+
+/* ここから */
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage{
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight{
+    margin-left: 30px;
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .basicProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 105px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .advancedProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 140px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight h3{
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .explanation{
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .annotationThin{
+    font-size: 12px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore .inequalitySignIcon{
+    position: relative;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore .inequalitySignIcon:before{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black02.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 15px;
+    left: 5px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore img{
+    padding-left: 20px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelLeftImage .aboutSubContentsParallelRight .readMore{
+    margin-top: 45px;
+}
+
+/* 逆 */
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage{
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft{
+    margin-right: 30px;
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .basicProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 105px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .advancedProgram{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 140px;
+    height: 26px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft h3{
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 1.8;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .explanation{
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .annotationThin{
+    font-size: 12px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore .inequalitySignIcon{
+    position: relative;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore .inequalitySignIcon:before{
+    position: absolute;
+    display: inline-block;
+    content: url(../images/icon_arrow01_right_black02.png);
+    width: 5px;/*画像の幅*/
+    height: 5px;/*画像の高さ*/
+    bottom: 15px;
+    left: 5px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore img{
+    padding-left: 20px;
+}
+
+.aboutSub .aboutSubContents .aboutSubContentsParallelRightImage .aboutSubContentsParallelLeft .readMore{
+    margin-top: 45px;
+}
+
+/* easyExplanation */
+
+.aboutSub .easyExplanation{
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.aboutSub .easyExplanation a:hover{
+    opacity: 0.7;
+}
+
+/* massages */
+
+.aboutSub .massagesBackground{
+    background-color:#F7F7F7;
+    border-top: solid 1px #E2E2E2;
+}
+
+.aboutSub .massagesBackground .massages{
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 1100px;
+}    
+
+.aboutSub .massages table{
+    border-spacing: 60px 2rem;
+    margin: 0 auto;
+}
+
+.aboutSub .massages table td{
+    background-size: auto auto;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );
+    padding: 30px;
+    width: 450px;
+    height: 70px;
+    position: relative;
+}
+
+.aboutSub .massages table td a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 98%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutSub .massages table td a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .massages table td a:after{
+    content: url(../images/mark6.jpg);
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.aboutSub .massages table td a span{
+    font-size: 24px;
+    display: block;
+    padding-left: 30px;
+    width: 360px;
+    line-height: 1.5;
+}
+
+.aboutSub .massages table td a p{
+    font-size: 12px;
+    width: 360px;
+    padding-left: 30px;
+}
+
+/* 詳細 */
+
+.aboutSub .detailMore{
+    text-align: center;
+    background-image: url(../images/markN.png);
+    background-size: 48px 48px;
+    margin-top: 80px;
+}
+
+.aboutSub .detailMore .detailMoreHead h2{
+    font-size: 22px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding-top: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul{
+    padding: 0;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 18px 60px;
+    margin: 10px 0;
+    position: relative;
+    font-size: 20px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul li a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .book a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 40px;/*画像の幅*/
+    height: 40px;/*画像の高さ*/
+    background-image: url(../images/book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .book a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 15px;/*画像の幅*/
+    height: 15px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_black01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 22px;
+    right: 8px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .talk a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 40px;/*画像の幅*/
+    height: 40px;/*画像の高さ*/
+    background-image: url(../images/book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+}
+
+.aboutSub .detailMore .detailMoreParallel ul .talk a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 15px;/*画像の幅*/
+    height: 15px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_black01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 22px;
+    right: 8px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel{
+    margin-top: 30px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel .telTime{
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a{
+    font-size: 14px;
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0);
+    border: solid 1px #FFFFFF;
+    padding: 0;
+    margin-left: 30px;
+    position: relative;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a:hover{
+    text-decoration: underline;
+}
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 10px;/*画像の幅*/
+    height: 10px;/*画像の高さ*/
+    background-image: url(../images/icon_arrow01_right_white01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 17px;
+    right: 8px;
+}
+
+
+.aboutSub .detailMore .detailMoreParallel .detailMoreParallelTel a p{
+    padding: 0;
+}
+
+/* ニュースとブログ */
+
+.aboutSub .newsAndBlog{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.aboutSub .newsAndBlog:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translate(-50%);
+    width: 1050px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.aboutSub .newsAndBlog ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutSub .newsAndBlog ul li{
+    list-style-type: none;
+    border: solid 1px #000000;
+    padding: 5px 50px;
+    width: 150px;
+    height: 30px;
+    margin: 20px;
+    position: relative;
+}
+
+.aboutSub .newsAndBlog ul li a{
+    color: #000000;
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 37.5px;
+}
+
+.aboutSub .newsAndBlog ul li a:hover{
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.aboutSub .newsAndBlog ul li a:after{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 15px;/*画像の幅*/
+    height: 15px;/*画像の高さ*/
+    background-image: url(../images/mark6.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 12px;
+    right: 7px;
+}
+
+.aboutSub .newsAndBlog ul li a:hover:after{
+    background-image: url(../images/mark_white.png);
+}
+
+/* その他のコンテンツ */
+
+.aboutSub .otherContents .otherContentsHead{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.aboutSub .otherContents .otherContentsParallel{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart{
+    text-align: center;
+    margin: 15px;
+    background-size: auto auto;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: repeating-linear-gradient(51deg, transparent, transparent 3px, rgba(227, 225, 225, 1) 3px, rgba(227, 225, 225, 1) 4px );
+    padding: 30px;
+    width: 450px;
+    height: 55px;
+    position: relative;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a{
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    width: 98%;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a:before{
+    position: absolute;
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    width: 17px;/*画像の幅*/
+    height: 17px;/*画像の高さ*/
+    background-image: url(../images/mark6.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    top: 43px;
+    right: 14px;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a:hover{
+    opacity: 0.7;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a img{
+    padding-top: 10px;
+}
+
+.aboutSub .otherContents .otherContentsParallel .otherContentsParallelPart a p{
+    font-size: 14px;
+}
+
+/* attributeNavi */
+
+footer{
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+footer .attributeNavi{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1050px;
+    padding-top: 30px;
+}
+
+footer .attributeNavi .backButton{
+    padding-right: 40px;
+}
+
+footer .attributeNavi .backButton:hover{
+    opacity: 0.7;
+}
+
+footer .attributeNavi ul{
+    display: flex;
+    padding: 0;
+}
+
+footer .attributeNavi ul li{
+    list-style-type: none;
+}
+
+footer .attributeNavi ul li:after{
+    content: '|';
+    color: 	#989CBA;
+    padding: 0 12px;
+}
+
+footer .attributeNavi ul li:last-child:after{
+    content: none;
+}
+
+footer .attributeNavi ul li a{
+    color: #010067;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .attributeNavi ul li a:hover{
+    text-decoration: underline;
+}
+
+/* underGlobalNavi */
+
+footer .underGlobalNavi{
+    display: flex;
+    justify-content: center;
+}
+
+footer .underGlobalNavi .underGlobalNaviList{
+    width: 195px;
+    padding: 10px;
+    margin-top: 5px;
+    border-bottom: solid 1px #C9C9C9;
+    padding-bottom: 35px;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title h3 span{
+    font-size: 10px;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title{
+    text-decoration: none;
+    color: #010067;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title:hover{
+    text-decoration: underline;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .title h3{
+    font-size: 16px;
+    margin: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul{
+    padding: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li{
+    list-style-type: none;
+    padding: 6px 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li:first-child{
+    padding-top: 0;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+}
+
+footer .underGlobalNavi .underGlobalNaviList ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .underGlobalNavi .underGlobalNaviList .underline{
+    padding-bottom: 10px;
+    border-bottom: solid 1px #C9C9C9;
+}
+
+/* rulesAndShare */
+
+footer .rulesAndShare{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1050px;
+    padding: 20px 0;
+}
+
+footer .rulesAndShare ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer .rulesAndShare ul li{
+    list-style-type: none;
+    padding-right: 15px;
+}
+
+footer .rulesAndShare ul li a{
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+footer .rulesAndShare ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .rulesAndShare .shareSide{
+    display: flex;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents{
+    width: 175px;
+    height: 45px;
+    position: relative;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:after{
+    content: '';
+    border-right: solid 1px #DDDDDD;
+    top: 0;
+    right: 0;
+    height: 45px;
+    position: absolute;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:before{
+    content: '\03e';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #DDDDDD;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents:last-child:after{
+    content: none;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a{
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a:hover{
+    background:rgba(204,204,204,0.3);
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+footer .rulesAndShare .shareSide .shareSideContents a .shareSideContentsAlign p{
+    margin: 0;
+    padding: 5px;
+}
+
+/* copyright */
+
+footer .copyrightBackground{
+    background-color: #1A1A1A;
+}
+
+footer .copyrightBackground .copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1050px;
+    padding: 10px 0;
+    font-family: 'myfont2';
+}
+
+footer .copyrightBackground .copyright a{
+    color: 	#999999;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+footer .copyrightBackground .copyright a:hover{
+    text-decoration: underline;
+}
+
+footer .copyrightBackground .copyright .institute{
+    color: 	#999999;
+    font-size: 11px;
+    position: relative;
+}
+
+footer .copyrightBackground .copyright .institute:before{
+    content: '\0a9';
+    position: absolute;
+    top: -3px;
+    left: -14px;
+    font-size: 16px;
+}

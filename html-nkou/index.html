@@ -11,46 +11,89 @@
     <meta property="og:description" content="角川ドワンゴが運営するN高についての説明をしています。" />
     <meta property="og:site_name" content="N高について｜N高等学校" />
     <meta property="og:image" content="https://github.com/sassamori/takaharusasamori/blob/feature/html01/html-nkou/images/campus_photo_01.jpg?raw=true" />
+    <link rel="stylesheet" href="common/normalize.css">
+    <link rel="stylesheet" href="common/style.css">
+    <script src="common/js/jquery-3.5.1.min.js"></script>
+    <script>
+        //scroll fix header
+        $(function () {
+            "use strict";
+            var flag = "view";
+        
+          $(window).on("scroll", function () {
+            // scrollTop()が「200」より大きい場合
+           //画面トップから、ナビゲーションメニューまでの高さ（ピクセル）を指定すれば、メニュースクロールで
+           //消えていくタイミングでヘッダが表示されて固定される。  
+            
+            if ($(this).scrollTop() > 185) {
+              if (flag === "view") {
+                $(".fixedHeadBackground").stop().css({opacity: '1.0'}).animate({
+           //”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+                  top: 0
+                }, 500);
+        
+                flag = "hide";
+              }
+            } else {
+              if (flag === "hide") {
+                $(".fixedHeadBackground").stop().animate({top:"-66px",opacity: 0}, 500);
+                //上にあがり切ったら透過度を0%にして背景が生きるように
+                　　　　//”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+                flag = "view";
+              }
+            }
+          });
+        });
+    </script>
 </head>
 <body>
     <header>
-        <nav class="fixedHead">
-            <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="180" height="40"></a>
-            <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="220" height="35">
-            <span>受付時間<br>平日10:00～19:00</span>
-            <a href="#"><p>説明会・相談会</p></a>
-            <a href="#"><p>資料請求</p></a>
-        </nav>
-        <nav class="upperHead">
-            <p>KADOKAWAが創る新しいネットの高校</p>
-            <ul>
-                <li><a href="#">入学案内</a></li>
-                <li><a href="#">キャンパス</a></li>
-                <li><a href="#">ニュース</a></li>
-                <li><a href="#">ブログ</a></li>
-                <li><a href="#">WEB出願</a></li>
-                <li><a href="#">卒業された方へ</a></li>
-            </ul>
-            <a href="#"><p>生徒用ログイン</p></a>
-        </nav>
+        <div class="upperHeadBackground">
+            <nav class="upperHead">
+                <p>KADOKAWAが創る新しいネットの高校</p>
+                <div class="upperHeadRight">
+                    <ul>
+                        <li><a href="#">入学案内<span class="line-right"></span></a></li>
+                        <li><a href="#">キャンパス<span class="line-right"></span></a></li>
+                        <li><a href="#">ニュース<span class="line-right"></span></a></li>
+                        <li><a href="#">ブログ<span class="line-right"></span></a></li>
+                        <li><a href="#">WEB出願<span class="line-right"></span></a></li>
+                        <li><a href="#">卒業された方へ</a></li>
+                    </ul>
+                    <a href="#"><p>生徒用ログイン</p></a>
+                </div>
+            </nav>
+        </div>
         <section class="logoTelShare">
-            <a href="#"><h1><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="200" height="45"></h1></a>
-            <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="220" height="35">
-            <span>受付時間：平日10:00～19:00</span>
-            <a href="#"><img src="images/header_social01_01.png" alt="facebookでシェア" width="30" height="30"></a>
-            <a href="#"><img src="images/header_social01_02.png" alt="twitterでシェア" width="30" height="30"></a>
-            <a href="#"><img src="images/header_social01_03.png" alt="youtubeでシェア" width="30" height="30"></a>
+            <div class="logoTelShareLeft">
+                <a href="#"><h1><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="200" height="45"></h1></a>
+            </div>
+            <div class="logoTelShareRight">
+                <div class="logoTelShareRightLeft">
+                    <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="210" height="30">
+                    <p>受付時間：平日10:00～19:00</p>
+                </div>
+                <div class="logoTelShareRightRight">
+                    <a href="#"><img src="images/header_social01_01.png" alt="facebookでシェア" width="30" height="30"></a>
+                    <a href="#"><img src="images/header_social01_02.png" alt="twitterでシェア" width="30" height="30"></a>
+                    <a href="#"><img src="images/header_social01_03.png" alt="youtubeでシェア" width="30" height="30"></a>
+                </div>
+            </div>
         </section>
         <nav class="globalNavi">
             <div class="globalNaviMajor">
-                <ul>
-                    <li><a href="#">N高について<br>About School</a></li>
-                    <li><a href="#">ネットコース<br>Net Course</a></li>
-                    <li><a href="#">通学コース<br>Commute Course</a></li>
-                    <li><a href="#">提携スクール<br>Alliance School</a></li>
-                </ul>
-                <a href="#"><p>説明会・相談会</p></a>
-                <a href="#"><p>資料請求</p></a>
+                <div class="globalNaviMajorLeft">
+                    <ul>
+                        <li>N高について<br><span>About School</span></li>
+                        <li><a href="#">ネットコース<br><span>Net Course</span></a></li>
+                        <li><a href="#">通学コース<br><span>Commute Course</span></a></li>
+                        <li><a href="#">提携スクール<br><span>Alliance School</span></a></li>
+                    </ul>
+                </div>
+                <div class="globalNaviMajorRight">
+                    <p><a href="#">説明会・相談会</a></p>
+                    <p><a href="#">資料請求</a></p>
+                </div>
             </div>
             <div class="globalNaviSmall">
                 <ul>
@@ -71,447 +114,528 @@
                 </ul>
             </div>
         </nav>
+        <div class="fixedHeadBackground">
+            <nav class="fixedHead">
+                <div class="fixedHeadLeft">
+                    <a href="#"><img src="images/header_mainlogo_pc01.png" alt="N高等学校" width="165" height="35"></a>
+                </div>
+                <div class="fixedHeadRight">
+                    <img src="images/header_tel01.png" alt="電話番号：0120-0252-15" width="200" height="22">
+                    <span>受付時間<br>平日10:00～19:00</span>
+                    <p><a href="#">説明会・相談会</a></p>
+                    <p><a href="#">資料請求</a></p>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main role="main">
     
-        <article class="articleMain">
-            <div class="aboutMain">
-                <div class="aboutMainHead">
-                    <img src="images/campus_photo_01.jpg" aria-hidden="true" width="100%" height="600">
+        <article class="aboutMain">
+            <div class="aboutMainHead">
+                <img src="images/campus_photo_01.jpg" aria-hidden="true" width="100%" height="530">
+                <div class="aboutMainHeadText">
                     <h1>N高について</h1>
-                    <p>About School</p> 
+                    <p>About School</p>
                 </div>
-                <nav class="breadcrumb">
-                    <ul>
-                        <li><a href="#">N高等学校 ｜ 通信制高校(広域)・単位制</a></li>
-                        <li>N高について</li>
-                    </ul>
-                </nav>
-                <section class="philosophy">
-                    <h2>IT×グローバル社会を生き抜く<br>
-                        “創造力”を身につけ、<br>
-                        世界で活躍する人材を育成する。</h2>
-                    <h3>創造力をもった人とは、自分なりの考えをもって<br>
-                        主体的に行動できる人です。</h3>
-                    <p>私たちの考える創造力とは、新しいモノを生み出す力だけではなく、自由な発想で考<br>
-                        え、主体性をもって問題に取り組む力を指します。インターネットが社会に広がり、<br>
-                        私たちの生活は大きく変わりました。インターネットを活用すれば、世界中の情報は<br>
-                        誰にでも簡単に手に入ります。情報そのものだけでは価値を生まず、その情報を元に<br>
-                        自分なりに考え、主体的に動ける人が価値を生み出せるのです。<br>
-                        創造力を身につけるために、教養、思考力、実践力の三つを学びます。</p>
-                </section>
-                <section class="policy">
+            </div>
+            <nav class="breadcrumb">
+                <ul>
+                    <li><a href="#">N高等学校 ｜ 通信制高校(広域)・単位制</a></li>
+                    <li>N高について</li>
+                </ul>
+            </nav>
+            <section class="philosophy">
+                <h2>IT×グローバル社会を生き抜く<br>
+                    “創造力”を身につけ、<br>
+                    世界で活躍する人材を育成する。</h2>
+                <h3>創造力をもった人とは、自分なりの考えをもって<br>
+                    主体的に行動できる人です。</h3>
+                <p>私たちの考える創造力とは、新しいモノを生み出す力だけではなく、自由な発想で考<br>
+                    え、主体性をもって問題に取り組む力を指します。インターネットが社会に広がり、<br>
+                    私たちの生活は大きく変わりました。インターネットを活用すれば、世界中の情報は<br>
+                    誰にでも簡単に手に入ります。情報そのものだけでは価値を生まず、その情報を元に<br>
+                    自分なりに考え、主体的に動ける人が価値を生み出せるのです。<br>
+                    創造力を身につけるために、教養、思考力、実践力の三つを学びます。</p>
+            </section>
+            <section class="policy">
+                <div class="underlineBold">
                     <h3>教育方針</h3>
-                    <div class="policyDetail">
-                        <dl>
-                            <dt>教　養</dt>
-                            <dd>自分なりの考えをもつための知識</dd>
-                            <dt>思考力</dt>
-                            <dd>知識を使って考える力</dd>
-                            <dt>実践力</dt>
-                            <dd>考えを行動に移す力</dd>
-                        </dl>
-                        <img src="images/about_img00_01.png" alt="教育方針の図" width="660" height="300">
-                    </div>
-                        <div class="policyDocument">
-                            <a href="#">
-                                <div class="policyDocumentLeft">
-                                    <img src="images/credo_card.jpg" alt="N STANDARD" width="160" height="270">
-                                </div>
-                                <div class="policyDocumentRight">
-                                    <h4>N STANDARDS</h4>
-                                    <p>N高等学校では教育方針をより具体化し、<br>
-                                        たN STANDARDS - エヌ スタンダード -<br>
-                                        という行動規範を設けております。生<br>
-                                        徒・教職員はN STANDARDSに記載され<br>
-                                        た12の項目を常に意識することを心がけ<br>
-                                        ます。</p>
-                                    <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                                </div>
-                            </a>
-                        </div>
-                </section>
-                <section class="charm">
-                    <h3>N高の魅力</h3>
-                    <div class="charmDetail">
-                        <div class="charmDetailText">
-                            <h4>ネットの高校だから<br>
-                                やりたい事に多くの時間を使える</h4>
-                            <p class="explanation">N高等学校は、インターネットと通信制高校の制度を活用した新<br>
-                                しい高校です。そのため、高校卒業のための学習にかかる拘束時<br>
-                                間を最小限にとどめる事ができます。だから自らが学びたい事に<br>
-                                多くの時間を充てる事ができます。</p>
-                            <p class="annotationThin">Basic Program：高校卒業資格取得のための必修授業<br>
-                                Advanced Program：将来に繋がる豊富な選択授業</p>
-                        </div>
-                        <div class="charmDetailImage">
-                            <img src="images/about_img02_01_20170927.png" alt="必修科目の時間は最小限にして、自らが学びたい事に多くの時間を充てる事ができます。" width="420" height="500">
-                        </div>
-                    </div>
-                    <div class="charmDetail">
-                        <div class="charmDetailText">
-                            <h4>増えた時間で<br>
-                                将来へ繋がる多くの経験ができる</h4>
-                            <p>N高では将来へ繋がるオリジナル授業であるAdvanced <br>
-                                Program（アドバンスト プログラム）を数多く用意しておりま<br>
-                                す。多くの経験からやりたい事をみつけましょう。</p>
-                        </div>
-                        <div class="charmDetailImage">
-                                <img src="images/about_img02_02.png" alt="プログラマやイラストレーター、小説家など将来へ繋がる多くの経験が積めます。" width="450" height="350">
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="aboutSub">
-                <div class="aboutSubContents gray">
-                    <div class="aboutSubContentsHead">
-                        <h2>高卒資格取得のためのBasic Program</h2>
-                        <p>ネットと通信制高校の制度を活用して、<br>
-                            一般的な全日制高校と比べ短い拘束時間で高校卒業資格を得ることが可能です。</p>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img03_01.jpg" alt="インターネット講座を受講中" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <p class="basicProgram">Basic Program</p>
-                                <h3>高校卒業資格を<br>
-                                    取得するための授業は<br>
-                                    スマホ・パソコンで。</h3>
-                                <p class="explanation">映像学習やレポートはネット上で行うので郵送の手間もなく、学習を進められます。映像授業は東京書籍(株)のインターネット講座を使用するため、安心して学ぶ事ができます。</p>
-                                <p class="annotationThin">※N高等学校は学校教育法第1条に定められた高等学校です。全日制と同じ卒業資格を取得することができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <p class="basicProgram">Basic Program</p>
-                                <h3>学校に通うのは<br>
-                                    年5日間程度※の<br>
-                                    スクーリングだけ。</h3>
-                                <p class="annotationBold">※標準履修でかつネット学習の状況により適用される日数です。</p>
-                                <p class="explanation">スクーリングは沖縄伊計本校と全国のスクーリング会場から選べます。沖縄本校のスクーリングは大自然の中で充実した学びと、思い出を提供します。また各地域に設置された会場でもスクーリングが可能です。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img03_02.jpg" alt="沖縄の海" width="680" height="480">
-                        </div>
-                    </div>
                 </div>
-                <div class="aboutSubContents">
-                    <div class="aboutSubContentsHead">
-                        <h2>プロフェッショナルによる将来へ繋がるAdvanced Program</h2>
-                        <p>Advanced Program（アドバンスト プログラム）とは、<br>
-                            任意で受講する選択式授業です。</p>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img04_01.jpg" alt="ネットで教材が使える" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>N高生なら<br>
-                                    学校の授業とは別に<br>
-                                    無料で学べる<br>
-                                    多くの授業があります。</h3>
-                                <p class="explanation">ネットで行うアドバンスト プログラムでは生放送と教材がセットになった専用アプリを使用。大学受験、プログラミング、文芸小説、外国語、イラストレーター、コミック等ではN予備校を使用して生放送とオリジナル教材で将来への学習ができます。授業等ではN予備校を使用して生放送とオリジナル教材で将来への学習ができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>実力派予備校講師<br>
-                                    による合格するための<br>
-                                    大学受験対策授業。</h3>
-                                <p class="explanation">有名予備校講師11名による生授業と講師による授業に紐づいた教材で大学合格を目指せます。アプリでは50冊分以上ボリュームを誇る参考書・問題集が利用できます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img04_02.jpg" alt="予備校講師の授業風景" width="680" height="480">
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img04_03.jpg" alt="プログラミングの様子" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>ドワンゴの<br>
-                                    トップエンジニアが<br>
-                                    教える、実践的な<br>
-                                    プログラミング授業。</h3>
-                                <p class="explanation">IT業界の最前線で活躍するプログラマが教える、実践的なプログラミング。全てのカリキュラムを終えた時、即戦力のプログラマとして実力が身に付いている事を約束します。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>小説、漫画、イラスト、<br>
-                                    ファッション、<br>
-                                    パティシエなど専門的な<br>
-                                    授業も盛りだくさん。</h3>
-                                <p class="explanation">夢の職業を学ぶ。夢を見つける為に、様々な仕事に触れる。多くの専門的な職業のアドバンストプログラムを通して、自らの将来を描くことができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img04_04.jpg" alt="製菓の実習の様子" width="680" height="480">
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img04_05.jpg" alt="酪農での職業体験の様子" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>日本各地の職業を<br>
-                                    リアルで体験。<br>
-                                    高校時代から社会と<br>
-                                    関わる職業体験。</h3>
-                                <p class="explanation">N高では多くの自治体や企業、団体と協力し、生徒が様々な地域で職業体験が出来る機会を作ります。多くの仕事に触れることで得た広い視野と価値観は一生の財産となります。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>世界の最先端を学ぶ<br>
-                                    国際教育プログラム。</h3>
-                                <p class="explanation">海外大学　国際教育プログラム<br>
-                                    国際的な生徒育成を目的とするN高等学校では世界の提携校のプログラムに参加する生徒を毎年募集しています。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img04_06.jpg" alt="海外の大学の様子" width="680" height="480">
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img04_07.jpg" alt="学習の様子" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <p class="advancedProgram">Advanced Program</p>
-                                <h3>中学までの<br>
-                                    学習範囲を学び直す<br>
-                                    中学復習授業。</h3>
-                                <p class="explanation">N高では義務教育課程の学び直しをサポートします。中学での学習が原因で、高校の単位取得授業に不安がある方でも再学習することができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents gray">
-                    <div class="aboutSubContentsHead">
-                        <h2>先端企業が使用するITツールを高校時代から利用</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <h3>slack、GitHub、<br>
-                                    G Suite for Education<br>
-                                    などのITツールを<br>
-                                    利用した<br>
-                                    コミュニケーションと<br>
-                                    学習。</h3>
-                                <p class="explanation">ネットの高校であるN高では現在、多くの企業で取り入れられているITツールを高校生の段階から利用します。社会へ出る前からIT社会への対応力を養うことができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img05_01.jpg" alt="先端企業が使用するslackやGitHubなどのITツール" width="680" height="480">
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents">
-                    <div class="aboutSubContentsHead">
-                        <h2>学校行事はネットとリアルで</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img06_01.jpg" alt="学校行事の様子" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <h3>仲間と一緒に高校生活を楽しむための<br>
-                                    ネット&リアルイベントが盛りだくさん。</h3>
-                                <p class="explanation">ニコニコ超会議での文化祭や遠足など、エンターテイメントのプロの現場を体感できます。仲間と出会い力を合わせて目標を達成する喜びや経験は貴重な財産となるはずです。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents gray">
-                    <div class="aboutSubContentsHead">
-                        <h2>N高起業部</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <h3>高校生だから起業する。</h3>
-                                <p class="explanation">年間の法人の起業件数は約5万社。もはや、起業は選択肢のひとつ。N高は学生が起業家を目指すことで、イノベーティブな考え方を学び、日本や世界を支える人材を育成するため、起業部を立ち上げます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img10.jpg" alt="名刺を差し出す様子" width="680" height="480">
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents">
-                    <div class="aboutSubContentsHead">
-                        <h2>全国の仲間とともに活動する部活動</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img07_01.jpg" alt="向き合ったPC" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                                <h3>部活を通じて<br>
-                                    仲間と出会い成長する。</h3>
-                                <p class="explanation">N高ではネットの高校独自の部活動があります。囲碁、将棋、競技プログラミング、eスポーツなど。全国のN高生とともに切磋琢磨して成長することができます。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents gray">
-                    <div class="aboutSubContentsHead">
-                        <h2>ネットの高校は2つの入学コースが選べます</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <h3>ネットの高校だから<br>
-                                    全国各地から<br>
-                                    入学できる<br>
-                                    ネットコース。</h3>
-                                <p class="explanation">今、社会が欲する多様性を持った人材を輩出することを目的とした教育プログラムを全国各地から学ぶことができます。高卒資格取得と、他では得られない学習を経験しましょう。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img08_01.jpg" alt="PCとスマホを操作する様子" width="680" height="480">
-                        </div>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <img src="images/about_img08_02.jpg" alt="仲間たちと談笑する様子" width="680" height="480">
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <a href="#">
-                            <h3>ネットの高校の<br>
-                                強みを生かした<br>
-                                常識を変え、<br>
-                                世界を変える人材を育む<br>
-                                通学コース。</h3>
-                            <p class="explanation">N高の通学コースでは、IT・グローバル社会で活躍するために必要な、基礎知識、実践力、思考力を備え、新たな価値を生み出す“創造力”を身につけることができます。日本で唯一の超実践的カリキュラムが、世界を変える人材を育成します。</p>
-                            <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="aboutSubContents">
-                    <div class="aboutSubContentsHead">
-                        <h2>より目的に特化したN高との提携スクール</h2>
-                    </div>
-                    <div class="aboutSubContentsParallel">
-                        <div class="aboutSubContentsParallelLeft">
-                            <a href="#">
-                                <h3>将来を考え、<br>
-                                    夢や目標に一直線な<br>
-                                    あなたのための<br>
-                                    提携スクール。</h3>
-                                <p class="explanation">プログラミング、ファッション、ゲーム、アニメ、パティシエ、美容、国際教養プログラムなど、夢や目標に突き進みたいN高生のための提携スクール。</p>
-                                <img src="images/text_read_more01_black01.png" alt="read more" width="80" height="15">
-                            </a>
-                        </div>
-                        <div class="aboutSubContentsParallelRight">
-                            <img src="images/about_img09_04.jpg" alt="スタンフォード大学やオックスフォード大学、VANTANなどの提携スクールがあります。" width="680" height="480">
-                        </div>
-                    </div>
-                </div>
-                <div class="easyExplanation">
-                    <a href="#"><img src="images/about_banner.jpg" alt="5分でわかるN高" width="1000" height="300"></a>
-                </div>
-                <div class="massages gray">
-                    <ul>
-                        <li><a href="#"><span>N高生からのメッセージ</span><br>
-                            私たちがN高を選んだ理由。</a></li>
-                        <li><a href="#"><span>学校関係者・著名人からのメッセージ</span><br>
-                            これから教育が変わる。学びのカタチが変わる。</a></li>
-                        <li><a href="#"><span>N高等学校保護者の声</span><br>
-                            N高に入学した生徒の保護者のみなさまにお話を伺いました。</a></li>
-                        <li><a href="#"><span>入学案内</span><br>
-                            入学は年に4回。自分のタイミングで入学ができる。前籍校の単位も引き継げるので転入学で友達と同じタイミングで卒業も可能。</a></li>
-                    </ul>
-                </div>
-                <div class="detailMore">
-                    <div class="detailMoreHead">
-                        <h2>N高についてさらに詳細を知りたい方はこちら</h2>
-                    </div>
-                    <div class="detailMoreParallel">
+                <div class="policyDetail">
+                    <dl>
                         <ul>
-                            <li><a href="#">資料請求(無料)</a></li>
-                            <li><a href="#">説明会・相談会</a></li>
+                            <li><span>教　養</span>自分なりの考えをもつための知識</li>
+                            <li><span>思考力</span>知識を使って考える力</li>
+                            <li><span>実践力</span>考えを行動に移す力</li>
                         </ul>
-                        <div class="detailMoreParallelTel">
-                            <img src="images/header_tel03.png" alt="電話番号：0120-0252-15" width="250" height="35">
-                            <p class="telTime">受付時間 平日10:00～19:00</p>
-                            <a href="#"><p class="web">WEBからお問い合わせ</p></a>
+                    </dl>
+                    <img src="images/about_img00_01_2.png" alt="教育方針の図" width="330" height="280">
+                </div>
+                <div class="policyDocument">
+                    <a href="#">
+                        <div class="policyDocumentLeft">
+                            <img src="images/credo_card.jpg" alt="N STANDARD" width="160" height="270">
                         </div>
+                        <div class="policyDocumentRight">
+                            <h4>N STANDARDS</h4>
+                            <p>N高等学校では教育方針をより具体化したN STANDARDS - エヌ スタンダード - という行動規範を設けております。生徒・教職員はN STANDARDSに記載された12の項目を常に意識することを心がけます。</p>
+                            <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="charm">
+                <div class="underlineBold">
+                    <h3>N高の魅力</h3>
+                </div>
+                <div class="charmDetail">
+                    <div class="charmDetailText">
+                        <h4>ネットの高校だから<br>
+                            やりたい事に多くの時間を使える</h4>
+                        <p class="explanation">N高等学校は、インターネットと通信制高校の制度を活用した新<br>
+                            しい高校です。そのため、高校卒業のための学習にかかる拘束時<br>
+                            間を最小限にとどめる事ができます。だから自らが学びたい事に<br>
+                            多くの時間を充てる事ができます。</p>
+                        <p class="annotationThin">Basic Program：高校卒業資格取得のための必修授業<br>
+                            Advanced Program：将来に繋がる豊富な選択授業</p>
+                    </div>
+                    <div class="charmDetailImage">
+                        <img src="images/about_img02_01_20170927.png" alt="必修科目の時間は最小限にして、自らが学びたい事に多くの時間を充てる事ができます。" width="450" height="500">
                     </div>
                 </div>
-                <div class="newsAndBlog">
-                    <ul>
-                        <li><a href="#">N高ニュース</a></li>
-                        <li><a href="#">N高ブログ</a></li>
-                    </ul>
+                <div class="charmDetail">
+                    <div class="charmDetailText">
+                        <h4>増えた時間で<br>
+                            将来へ繋がる多くの経験ができる</h4>
+                        <p class="explanation">N高では将来へ繋がるオリジナル授業であるAdvanced <br>
+                            Program（アドバンスト プログラム）を数多く用意しておりま<br>
+                            す。多くの経験からやりたい事をみつけましょう。</p>
+                    </div>
+                    <div class="charmDetailImage">
+                        <img src="images/about_img02_02.png" alt="プログラマやイラストレーター、小説家など将来へ繋がる多くの経験が積めます。" width="450" height="350">
+                    </div>
                 </div>
-                <div class="otherContents">
-                    <p>学校法人角川ドワンゴ学園は、N高等学校以外にもさまざまな学びの場を提供しています</p>
-                    <div class="otherContentsParallel">
-                        <div class="otherContentsParallelLeft">
-                            <a href="#">
-                                <img src="images/footer05_Njr.png" alt="N高中等部ロゴ" width="120" height="30">
-                                <p>社会で求められる創造力を身につけるプログレッシブスクール</p>
-                            </a>
-                        </div>
-                        <div class="otherContentsParallelRight">
-                            <a href="#">
-                                <img src="images/footer05_nlabo.png" alt="N Code Laboロゴ" width="150" height="50">
-                                <p>N高のプログラミング教育を小学生・中学生・高校生が学ぶ教室</p>
-                            </a>
-                        </div>
+            </section>
+        </article>
+        <section class="aboutSub">
+            <div class="aboutSubContents gray">
+                <div class="aboutSubContentsHead">
+                    <h2>高卒資格取得のためのBasic Program</h2>
+                    <p>ネットと通信制高校の制度を活用して、<br>
+                        一般的な全日制高校と比べ短い拘束時間で高校卒業資格を得ることが可能です。</p>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img03_01.jpg" alt="インターネット講座を受講中" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <p class="basicProgram">Basic Program</p>
+                            <h3>高校卒業資格を<br>
+                                取得するための授業は<br>
+                                スマホ・パソコンで。</h3>
+                            <p class="explanation">映像学習やレポートはネット上で行うので郵送の手間もなく、学習を進められます。映像授業は東京書籍(株)のインターネット講座を使用するため、安心して学ぶ事ができます。</p>
+                            <p class="annotationThin">※N高等学校は学校教育法第1条に定められた高等学校です。全日制と同じ卒業資格を取得することができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <p class="basicProgram">Basic Program</p>
+                            <h3>学校に通うのは<br>
+                                年5日間程度※の<br>
+                                スクーリングだけ。</h3>
+                            <p class="annotationBold">※標準履修でかつネット学習の状況により適用される日数です。</p>
+                            <p class="explanation">スクーリングは沖縄伊計本校と全国のスクーリング会場から選べます。沖縄本校のスクーリングは大自然の中で充実した学びと、思い出を提供します。また各地域に設置された会場でもスクーリングが可能です。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img03_02.jpg" alt="沖縄の海" width="700" height="480">
                     </div>
                 </div>
             </div>
-        </article>
+            <div class="aboutSubContents">
+                <div class="aboutSubContentsHead">
+                    <h2>プロフェッショナルによる将来へ繋がるAdvanced Program</h2>
+                    <p>Advanced Program（アドバンスト プログラム）とは、<br>
+                        任意で受講する選択式授業です。</p>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img04_01.jpg" alt="ネットで教材が使える" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>N高生なら<br>
+                                学校の授業とは別に<br>
+                                無料で学べる<br>
+                                多くの授業があります。</h3>
+                            <p class="explanation">ネットで行うアドバンスト プログラムでは生放送と教材がセットになった専用アプリを使用。大学受験、プログラミング、文芸小説、外国語、イラストレーター、コミック等ではN予備校を使用して生放送とオリジナル教材で将来への学習ができます。授業等ではN予備校を使用して生放送とオリジナル教材で将来への学習ができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>実力派予備校講師<br>
+                                による合格するための<br>
+                                大学受験対策授業。</h3>
+                            <p class="explanation">有名予備校講師11名による生授業と講師による授業に紐づいた教材で大学合格を目指せます。アプリでは50冊分以上ボリュームを誇る参考書・問題集が利用できます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img04_02.jpg" alt="予備校講師の授業風景" width="700" height="480">
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img04_03.jpg" alt="プログラミングの様子" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>ドワンゴの<br>
+                                トップエンジニアが<br>
+                                教える、実践的な<br>
+                                プログラミング授業。</h3>
+                            <p class="explanation">IT業界の最前線で活躍するプログラマが教える、実践的なプログラミング。全てのカリキュラムを終えた時、即戦力のプログラマとして実力が身に付いている事を約束します。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>小説、漫画、イラスト、<br>
+                                ファッション、<br>
+                                パティシエなど専門的な<br>
+                                授業も盛りだくさん。</h3>
+                            <p class="explanation">夢の職業を学ぶ。夢を見つける為に、様々な仕事に触れる。多くの専門的な職業のアドバンストプログラムを通して、自らの将来を描くことができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img04_04.jpg" alt="製菓の実習の様子" width="700" height="480">
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img04_05.jpg" alt="酪農での職業体験の様子" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>日本各地の職業を<br>
+                                リアルで体験。<br>
+                                高校時代から社会と<br>
+                                関わる職業体験。</h3>
+                            <p class="explanation">N高では多くの自治体や企業、団体と協力し、生徒が様々な地域で職業体験が出来る機会を作ります。多くの仕事に触れることで得た広い視野と価値観は一生の財産となります。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>世界の最先端を学ぶ<br>
+                                国際教育プログラム。</h3>
+                            <p class="explanation">海外大学　国際教育プログラム<br>
+                                国際的な生徒育成を目的とするN高等学校では世界の提携校のプログラムに参加する生徒を毎年募集しています。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img04_06.jpg" alt="海外の大学の様子" width="700" height="480">
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img04_07.jpg" alt="学習の様子" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <p class="advancedProgram">Advanced Program</p>
+                            <h3>中学までの<br>
+                                学習範囲を学び直す<br>
+                                中学復習授業。</h3>
+                            <p class="explanation">N高では義務教育課程の学び直しをサポートします。中学での学習が原因で、高校の単位取得授業に不安がある方でも再学習することができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents gray">
+                <div class="aboutSubContentsHead">
+                    <h2>先端企業が使用するITツールを高校時代から利用</h2>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <h3>slack、GitHub、<br>
+                                G Suite for Education<br>
+                                などのITツールを<br>
+                                利用した<br>
+                                コミュニケーションと<br>
+                                学習。</h3>
+                            <p class="explanation">ネットの高校であるN高では現在、多くの企業で取り入れられているITツールを高校生の段階から利用します。社会へ出る前からIT社会への対応力を養うことができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img05_01.jpg" alt="先端企業が使用するslackやGitHubなどのITツール" width="700" height="480">
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents">
+                <div class="aboutSubContentsHead">
+                    <h2>学校行事はネットとリアルで</h2>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img06_01.jpg" alt="学校行事の様子" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <h3>仲間と一緒に高校生活を楽しむための<br>
+                                ネット&リアルイベントが盛りだくさん。</h3>
+                            <p class="explanation">ニコニコ超会議での文化祭や遠足など、エンターテイメントのプロの現場を体感できます。仲間と出会い力を合わせて目標を達成する喜びや経験は貴重な財産となるはずです。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents gray">
+                <div class="aboutSubContentsHead">
+                    <h2>N高起業部</h2>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <h3>高校生だから起業する。</h3>
+                            <p class="explanation">年間の法人の起業件数は約5万社。もはや、起業は選択肢のひとつ。N高は学生が起業家を目指すことで、イノベーティブな考え方を学び、日本や世界を支える人材を育成するため、起業部を立ち上げます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img10.jpg" alt="名刺を差し出す様子" width="700" height="480">
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents">
+                <div class="aboutSubContentsHead">
+                    <h2>全国の仲間とともに活動する部活動</h2>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img07_01.jpg" alt="向き合ったPC" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                            <h3>部活を通じて<br>
+                                仲間と出会い成長する。</h3>
+                            <p class="explanation">N高ではネットの高校独自の部活動があります。囲碁、将棋、競技プログラミング、eスポーツなど。全国のN高生とともに切磋琢磨して成長することができます。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents gray">
+                <div class="aboutSubContentsHead">
+                    <h2>ネットの高校は2つの入学コースが選べます</h2>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <h3>ネットの高校だから<br>
+                                全国各地から<br>
+                                入学できる<br>
+                                ネットコース。</h3>
+                            <p class="explanation">今、社会が欲する多様性を持った人材を輩出することを目的とした教育プログラムを全国各地から学ぶことができます。高卒資格取得と、他では得られない学習を経験しましょう。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img08_01.jpg" alt="PCとスマホを操作する様子" width="700" height="480">
+                    </div>
+                </div>
+                <div class="aboutSubContentsParallelLeftImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <img src="images/about_img08_02.jpg" alt="仲間たちと談笑する様子" width="700" height="480">
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <a href="#">
+                        <h3>ネットの高校の<br>
+                            強みを生かした<br>
+                            常識を変え、<br>
+                            世界を変える人材を育む<br>
+                            通学コース。</h3>
+                        <p class="explanation">N高の通学コースでは、IT・グローバル社会で活躍するために必要な、基礎知識、実践力、思考力を備え、新たな価値を生み出す“創造力”を身につけることができます。日本で唯一の超実践的カリキュラムが、世界を変える人材を育成します。</p>
+                        <div class="readMore">
+                            <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSubContents">
+                <div class="aboutSubContentsHead">
+                    <h2>より目的に特化したN高との提携スクール</h2>
+                </div>
+                <div class="aboutSubContentsParallelRightImage">
+                    <div class="aboutSubContentsParallelLeft">
+                        <a href="#">
+                            <h3>将来を考え、<br>
+                                夢や目標に一直線な<br>
+                                あなたのための<br>
+                                提携スクール。</h3>
+                            <p class="explanation">プログラミング、ファッション、ゲーム、アニメ、パティシエ、美容、国際教養プログラムなど、夢や目標に突き進みたいN高生のための提携スクール。</p>
+                            <div class="readMore">
+                                <span class="inequalitySignIcon"></span><img src="images/text_read_more01_black01.png" alt="read more" width="75" height="13">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aboutSubContentsParallelRight">
+                        <img src="images/about_img09_04.jpg" alt="スタンフォード大学やオックスフォード大学、VANTANなどの提携スクールがあります。" width="700" height="480">
+                    </div>
+                </div>
+            </div>
+            <div class="easyExplanation">
+                <a href="#"><img src="images/about_banner.jpg" alt="5分でわかるN高" width="1035" height="300"></a>
+            </div>
+            <div class="massagesBackground">
+                <div class="massages">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <div class="massagesText">
+                                            <span>N高生からのメッセージ</span>
+                                            <p>私たちがN高を選んだ理由。</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        <div class="massagesText">
+                                            <span>学校関係者・著名人からのメッセージ</span>
+                                            <p>これから教育が変わる。学びのカタチが変わる。</p>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <div class="massagesText">
+                                            <span>N高等学校保護者の声</span>
+                                            <p>N高に入学した生徒の保護者のみなさまにお話を伺いました。</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        <div class="massagesText">
+                                            <span>入学案内</span>
+                                            <p>入学は年に4回。自分のタイミングで入学ができる。前籍校の単位も引き継げるので転入学で友達と同じタイミングで卒業も可能。</p>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="detailMore">
+                <div class="detailMoreHead">
+                    <h2>N高についてさらに詳細を知りたい方はこちら</h2>
+                </div>
+                <div class="detailMoreParallel">
+                    <ul>
+                        <li class="book"><a href="#">資料請求(無料)</a></li>
+                        <li class="talk"><a href="#">説明会・相談会</a></li>
+                    </ul>
+                    <div class="detailMoreParallelTel">
+                        <img src="images/footer02_tel01.png" alt="電話番号：0120-0252-15" width="250" height="35">
+                        <p class="telTime">受付時間 平日10:00～19:00</p>
+                        <a href="#"><p class="web">WEBからお問い合わせ</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="newsAndBlog">
+                <ul>
+                    <li><a href="#">N高ニュース</a></li>
+                    <li><a href="#">N高ブログ</a></li>
+                </ul>
+            </div>
+            <div class="otherContents">
+                <div class="otherContentsHead">
+                    <p>学校法人角川ドワンゴ学園は、N高等学校以外にもさまざまな学びの場を提供しています</p>
+                </div>
+                <div class="otherContentsParallel">
+                    <div class="otherContentsParallelPart">
+                        <a href="#">
+                            <div class="otherContentsParallelPartAlign">
+                                <img src="images/footer05_Njr.png" alt="N高中等部ロゴ" width="130" height="35">
+                                <p>社会で求められる創造力を身につけるプログレッシブスクール</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="otherContentsParallelPart">
+                        <a href="#">
+                            <div class="otherContentsParallelPartAlign">
+                                <img src="images/footer05_nlabo.png" alt="N Code Laboロゴ" width="150" height="45">
+                                <p>N高のプログラミング教育を小学生・中学生・高校生が学ぶ教室</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <nav class="attributeNavi">
-            <ul class="attributeNaviSide">
+            <ul>
                 <li><a href="#">トップ</a></li>
                 <li><a href="#">中3生・新入生の方</a></li>
                 <li><a href="#">転入生の方</a></li>
@@ -519,11 +643,11 @@
                 <li><a href="#">保護者・教育関係者の方</a></li>
                 <li><a href="#">海外在住の方</a></li>
             </ul>
-            <a href="#"><img src="images/footer01_to_top01.png" alt="ページTOPへ戻る" width="75" height="75"></a>
+            <a href="#" class="backButton"><img src="images/footer01_to_top01.png" alt="ページTOPへ戻る" width="75" height="75"></a>
         </nav>
         <nav class="underGlobalNavi">
             <div class="underGlobalNaviList">
-                <a href="#"><h3>アドバンスト プログラム<br>
+                <a href="#" class="title"><h3><span>アドバンスト プログラム</span><br>
                     Advanced Program</h3></a>
                 <ul>
                     <li><a href="#">大学受験対策</a></li>
@@ -539,7 +663,7 @@
                 </ul>
             </div>
             <div class="underGlobalNaviList">
-                <a href="#"><h3>N高について</h3></a>
+                <a href="#" class="title"><h3><br>N高について</h3></a>
                 <ul>
                     <li><a href="#">5分でわかるN高</a></li>
                     <li><a href="#">高卒資格取得について</a></li>
@@ -559,17 +683,15 @@
                 </ul>
             </div>
             <div class="underGlobalNaviList">
-                <a href="#"><h3>ネットコース</h3></a>
-                <ul>
+                <a href="#" class="title"><h3><br>ネットコース</h3></a>
+                <ul class="underline">
                     <li><a href="#">ネット学習</a></li>
                     <li><a href="#">ネットコース特進専攻</a></li>
                     <li><a href="#">担任サポート</a></li>
                     <li><a href="#">ネットコース生の1日</a></li>
                     <li><a href="#">学費(ネットコース)</a></li>
                 </ul>
-            </div>
-            <div class="underGlobalNaviList">
-                <a href="#"><h3>ネット部活</h3></a>
+                <a href="#" class="title"><h3><br>ネット部活</h3></a>
                 <ul>
                     <li><a href="#">投資部</a></li>
                     <li><a href="#">起業部</a></li>
@@ -578,7 +700,7 @@
                 </ul>
             </div>
             <div class="underGlobalNaviList">
-                <a href="#"><h3>通学コース</h3></a>
+                <a href="#" class="title"><h3><br>通学コース</h3></a>
                 <ul>
                     <li><a href="#">本科クラス</a></li>
                     <li><a href="#">プログラミング クラス</a></li>
@@ -602,8 +724,8 @@
                 </ul>
             </div>
             <div class="underGlobalNaviList">
-                <a href="#"><h3>提携スクール</h3></a>
-                <ul>
+                <a href="#" class="title"><h3><br>提携スクール</h3></a>
+                <ul class="underline">
                     <li><a href="#">スタンフォード大学</a></li>
                     <li><a href="#">オックスフォード</a></li>
                     <li><a href="#">バンタンテックフォード</a></li>
@@ -612,8 +734,6 @@
                     <li><a href="#">ASO高等部</a></li>
                     <li><a href="#">EXPG高等学院</a></li>
                 </ul>
-            </div>
-            <div class="underGlobalNaviList">
                 <ul>
                     <li><a href="#">入学案内</a></li>
                     <li><a href="#">WEB出願</a></li>
@@ -636,37 +756,45 @@
             </div>
         </nav>
         <nav class="rulesAndShare">
-            <ul class="rulesSide">
+            <ul>
                 <li><a href="#">個人情報保護方針</a></li>
                 <li><a href="#">学校法人概要</a></li>
             </ul>
             <div class="shareSide">
                 <div class="shareSideContents">
                     <a href="#">
-                        <img src="images/icon_twitter01.png" alt="twitter" width="30" height="30">
-                        <p>N高等学校公式<br>
-                        twitter</p>
+                        <div class="shareSideContentsAlign">
+                            <img src="images/icon_twitter01.png" alt="twitter" width="30" height="30">
+                            <p>N高等学校公式<br>
+                            twitter</p>
+                        </div>
                     </a>
                 </div>
                 <div class="shareSideContents">
                     <a href="#">
-                        <img src="images/icon_facebook01.png" alt="facebook" width="30" height="30">
-                        <p>N高等学校公式<br>
-                        facebook</p>
+                        <div class="shareSideContentsAlign">
+                            <img src="images/icon_facebook01.png" alt="facebook" width="30" height="30">
+                            <p>N高等学校公式<br>
+                            facebook</p>
+                        </div>
                     </a>
                 </div>
                 <div class="shareSideContents">
                     <a href="#">
-                        <img src="images/icon_youtube01.png" alt="youtube" width="30" height="30">
-                        <p>N高等学校公式<br>
-                        YouTubeチャンネル</p>
+                        <div class="shareSideContentsAlign">
+                            <img src="images/icon_youtube01.png" alt="youtube" width="30" height="30">
+                            <p>N高等学校公式<br>
+                            YouTubeチャンネル</p>
+                        </div>
                     </a>
                 </div>
             </div>
         </nav>
-        <div class="copyright">
-            <a href="#"><p>N高等学校：ホーム</p></a>
-            <p>KADOKAWA DWANGO educational institute</p>
+        <div class="copyrightBackground">
+            <div class="copyright">
+                <a href="#">N高等学校：ホーム</a>
+                <p class="institute">KADOKAWA DWANGO educational institute</p>
+            </div>
         </div>
     </footer>
 </body>
