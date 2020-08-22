@@ -92,17 +92,7 @@ body{
 }
 
 .fixedHead .fixedHeadRight p a:hover:before{
-    position: absolute;
-    content: '';/*何も入れない*/
-    display: inline-block;/*忘れずに！*/
-    width: 10px;/*画像の幅*/
-    height: 10px;/*画像の高さ*/
     background-image: url(../images/icon_arrow01_right_white01.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    top: 15px;
-    right: 12px;
 }
 
 .upperHeadBackground{
@@ -331,17 +321,7 @@ body{
 }
 
 .globalNavi .globalNaviMajor .globalNaviMajorRight p a:hover:before{
-    position: absolute;
-    content: '';/*何も入れない*/
-    display: inline-block;/*忘れずに！*/
-    width: 10px;/*画像の幅*/
-    height: 10px;/*画像の高さ*/
     background-image: url(../images/icon_arrow01_right_white01.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    top: 15px;
-    right: 12px;
 }
 
 .globalNavi .globalNaviSmall{
@@ -1211,17 +1191,7 @@ body{
 }
 
 .aboutSub .newsAndBlog ul li a:hover:after{
-    position: absolute;
-    content: '';/*何も入れない*/
-    display: inline-block;/*忘れずに！*/
-    width: 15px;/*画像の幅*/
-    height: 15px;/*画像の高さ*/
     background-image: url(../images/mark_white.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    top: 12px;
-    right: 7px;
 }
 
 /* その他のコンテンツ */
