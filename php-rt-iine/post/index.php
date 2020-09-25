@@ -85,8 +85,9 @@ function makeLink($value){
         <?php if($post['reply_post_id'] > 0): ?>
             <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元メッセージ</a>
         <?php endif ?>
+        [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
         <?php if($_SESSION['id'] == $post['member_id']): ?>
-            [<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color:#F33;">削除</a>]
+            <br>[<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color:#F33;">削除</a>]
         <?php endif ?>
     </p>
 </div>
