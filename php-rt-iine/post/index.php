@@ -44,6 +44,11 @@ $posts = $db->prepare('SELECT members.name, members.picture, posts.* FROM member
 $posts->bindParam(1,$start,PDO::PARAM_INT);
 $posts->execute();
 
+$favos = $db->query('SELECT * FROM favos');
+$favos_all = $favos->fetchall();
+$count = $db->query('SELECT COUNT(*) AS cnt FROM favos');
+$favo_count = $count->fetch();
+
 if(isset($_REQUEST['res'])){
     $response = $db->prepare('SELECT members.name, members.picture, posts.* FROM members,posts WHERE members.id=posts.member_id AND posts.id=? ORDER BY posts.created DESC');
     $response->execute(array($_REQUEST['res']));
@@ -85,8 +90,23 @@ function makeLink($value){
         <?php if($post['reply_post_id'] > 0): ?>
             <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元メッセージ</a>
         <?php endif ?>
-        [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
-        <?php if($_SESSION['id'] == $post['member_id']): ?>
+        <?php
+        $not_favo_count = 0;
+        foreach($favos_all as $favo):
+        ?>
+            <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id'] && $favo['delete_flag'] == 0): ?>
+                [いいね済][<a href="favo_cancel.php?id=<?php echo h($post['id']); ?>">いいね取り消し</a>]
+            <?php else: ?>
+                <?php $not_favo_count++; ?>
+                <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id'] && $favo['delete_flag'] == 1): ?>
+                    [<a href="re_favo.php?id=<?php echo h($post['id']); ?>">再いいね</a>]
+                    <?php break; ?>
+                <?php elseif($not_favo_count == $favo_count['cnt']): ?>
+                    [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
+                <?php endif ?>
+            <?php endif ?>
+        <?php endforeach ?>
+        <?php if($member['id'] == $post['member_id']): ?>
             <br>[<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color:#F33;">削除</a>]
         <?php endif ?>
     </p>
