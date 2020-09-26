@@ -1,3 +1,4 @@
+<!-- （新規）いいねをする処理 -->
 <?php
 session_start();
 require('dbconnect.php');

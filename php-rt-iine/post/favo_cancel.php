@@ -1,3 +1,4 @@
+<!-- favoを取り消す処理 -->
 <?php
 session_start();
 require('dbconnect.php');
