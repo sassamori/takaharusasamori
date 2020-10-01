@@ -56,6 +56,10 @@ $favos_all = $favos->fetchall();
 $count = $db->query('SELECT COUNT(*) AS cnt FROM favos');
 $favo_count = $count->fetch();
 
+//rtsテーブルからデータを引き出す
+$rts = $db->query('SELECT * FROM rts');
+$rts_all = $rts->fetchall();
+
 if(isset($_REQUEST['res'])){
     $response = $db->prepare(
         'SELECT members.name, members.picture, posts.*
@@ -130,16 +134,26 @@ function makeLink($value){
             <?php endif ?>
         <?php endforeach ?>
 
-        <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示。 -->
-        <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
-            [RT済][<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
-        <?php elseif($post['rt_flag'] == 1): ?>
-        <!-- （何も表示しない） -->
-        <?php elseif($post['delete_flag'] == 1): ?>
-            [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
-        <?php else: ?>
-            [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
-        <?php endif ?>
+        <?php foreach($rts_all as $rt): ?>
+            <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
+            <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
+                [RT済]
+                (<?php echo 1; ?>)
+                [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
+            <!-- 上記以外のリツイートのツイート（rt_flag=1）だったら何も表示しない -->
+            <?php elseif($post['rt_flag'] == 1): ?>
+            <!-- 削除フラグが1（delete_flag=1）だったら再RTと表示する -->
+            <?php elseif($post['delete_flag'] == 1): ?>
+                [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
+                (<?php echo 1; ?>)
+            <!-- 上記3つ以外だったらRTと表示する -->
+            <?php else: ?>
+                [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
+                (<?php echo 1; ?>)
+            <?php endif ?>
+        <?php endforeach ?>
+
+        <!-- RTカウント -->
 
         <?php if($member['id'] == $post['member_id']): ?>
             <br>[<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color:#F33;">削除</a>]
