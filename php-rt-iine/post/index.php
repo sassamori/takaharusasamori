@@ -95,7 +95,12 @@ function makeLink($value){
         <input type="submit" value="投稿する" />
     </div>
 </form>
-<?php foreach($posts as $post): ?>
+<?php
+foreach($posts as $post):
+    $rt_counts = $db->prepare('SELECT COUNT(*) as cnt FROM rts WHERE rt_delete_flag=0 AND post_id=?');
+    $rt_counts->execute(array($post['id']));
+    $rt_count = $rt_counts->fetch();
+?>
 <div class="msg">
     <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
     <?php if($post['rt_flag'] == 1): ?>
@@ -134,24 +139,22 @@ function makeLink($value){
             <?php endif ?>
         <?php endforeach ?>
 
-        <?php foreach($rts_all as $rt): ?>
             <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
             <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
                 [RT済]
-                (<?php echo 1; ?>)
+                (<?php echo h($rt_count['cnt']); ?>)
                 [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
             <!-- 上記以外のリツイートのツイート（rt_flag=1）だったら何も表示しない -->
             <?php elseif($post['rt_flag'] == 1): ?>
             <!-- 削除フラグが1（delete_flag=1）だったら再RTと表示する -->
             <?php elseif($post['delete_flag'] == 1): ?>
                 [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
-                (<?php echo 1; ?>)
+                (<?php echo h($rt_count['cnt']); ?>)
             <!-- 上記3つ以外だったらRTと表示する -->
             <?php else: ?>
                 [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
-                (<?php echo 1; ?>)
+                (<?php echo h($rt_count['cnt']); ?>)
             <?php endif ?>
-        <?php endforeach ?>
 
         <!-- RTカウント -->
 
