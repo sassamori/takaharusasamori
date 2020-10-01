@@ -41,7 +41,11 @@ $page = min($page,$maxPage);
 
 $start = ($page - 1) * 5;
 
-$posts = $db->prepare('SELECT members.name, members.picture, posts.* FROM members,posts WHERE members.id=posts.member_id ORDER BY posts.created DESC LIMIT ?,5');
+$posts = $db->prepare(
+    'SELECT members.name, members.picture, posts.*
+    FROM members INNER JOIN posts ON members.id=posts.member_id
+    WHERE NOT (rt_flag=1 AND delete_flag=1) ORDER BY posts.created DESC LIMIT ?,5'
+);
 $posts->bindParam(1,$start,PDO::PARAM_INT);
 $posts->execute();
 
@@ -53,7 +57,10 @@ $count = $db->query('SELECT COUNT(*) AS cnt FROM favos');
 $favo_count = $count->fetch();
 
 if(isset($_REQUEST['res'])){
-    $response = $db->prepare('SELECT members.name, members.picture, posts.* FROM members,posts WHERE members.id=posts.member_id AND posts.id=? ORDER BY posts.created DESC');
+    $response = $db->prepare(
+        'SELECT members.name, members.picture, posts.*
+        FROM members,posts
+        WHERE members.id=posts.member_id AND posts.id=? ORDER BY posts.created DESC');
     $response->execute(array($_REQUEST['res']));
 
     $table = $response->fetch();
@@ -124,8 +131,12 @@ function makeLink($value){
         <?php endforeach ?>
 
         <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示。 -->
-        <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rt_flag'] == 1): ?>
+        <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
             [RT済][<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
+        <?php elseif($post['rt_flag'] == 1): ?>
+        <!-- （何も表示しない） -->
+        <?php elseif($post['delete_flag'] == 1): ?>
+            [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
         <?php else: ?>
             [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
         <?php endif ?>
@@ -143,7 +154,7 @@ function makeLink($value){
 前のページへ
 <?php endif ?>
 <?php if($page < $maxPage): ?>
-<a href="index.php?page=<?php print($page + 1); ?>">前のページへ</a>
+<a href="index.php?page=<?php print($page + 1); ?>">次のページへ</a>
 <?php else: ?>
 次のページへ
 <?php endif ?>
