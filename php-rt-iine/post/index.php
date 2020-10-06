@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('dbconnect.php');
+require_once('function_h.php');
 
 if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 >time()){
     $_SESSION['time'] = time();
@@ -67,10 +68,6 @@ if(isset($_REQUEST['res'])){
 
     $table = $response->fetch();
     $message = '@'.$table['name'].' '.$table['message'];
-}
-
-function h($value){
-    return htmlspecialchars($value,ENT_QUOTES);
 }
 
 function makeLink($value){
