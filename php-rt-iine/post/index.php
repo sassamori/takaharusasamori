@@ -32,7 +32,7 @@ $page = $_GET['page'];
 $page = $_GET['page'] ?? 1;
 $page = max($page,1);
 
-$counts = $db->query('SELECT COUNT(*) AS cnt FROM posts');
+$counts = $db->query('SELECT COUNT(*) AS cnt FROM posts WHERE NOT (rt_flag=1 AND delete_flag=1)');
 $cnt = $counts->fetch();
 $maxPage = ceil($cnt['cnt'] / 5);
 $page = min($page,$maxPage);
