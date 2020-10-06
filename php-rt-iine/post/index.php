@@ -28,10 +28,8 @@ if(!empty($_POST)){
     }
 }
 
-$page = $_REQUEST['page'];
-if($page == ''){
-    $page = 1;
-}
+$page = $_GET['page'];
+$page = $_GET['page'] ?? 1;
 $page = max($page,1);
 
 $counts = $db->query('SELECT COUNT(*) AS cnt FROM posts');
