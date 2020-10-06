@@ -2,6 +2,7 @@
 session_start();
 require_once('dbconnect.php');
 require_once('function_h.php');
+require_once('function_makelink.php');
 
 if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 >time()){
     $_SESSION['time'] = time();
@@ -68,10 +69,6 @@ if(isset($_REQUEST['res'])){
 
     $table = $response->fetch();
     $message = '@'.$table['name'].' '.$table['message'];
-}
-
-function makeLink($value){
-    return mb_ereg_replace("(https?)(://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)",'<a href="\1\2">\1\2</a>',$value);
 }
 
 ?>
