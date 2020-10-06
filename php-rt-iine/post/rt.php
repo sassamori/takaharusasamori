@@ -1,7 +1,7 @@
 <!--  RTをする処理 -->
 <?php
 session_start();
-require('dbconnect.php');
+require_once('dbconnect.php');
 
 if(isset($_GET['id']) && isset($_SESSION['id'])){
     $posts = $db->prepare('SELECT members.name, members.picture, posts.* FROM members,posts WHERE members.id=posts.member_id AND posts.id=?');

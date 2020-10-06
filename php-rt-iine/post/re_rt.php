@@ -1,7 +1,7 @@
 <!-- 再RTをする処理 -->
 <?php
 session_start();
-require('dbconnect.php');
+require_once('dbconnect.php');
 
 if(isset($_GET['id']) && isset($_SESSION['id'])){
     $re_rt_info = $db->prepare(

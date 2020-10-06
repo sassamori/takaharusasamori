@@ -1,7 +1,7 @@
 <!-- RTを取り消す処理 -->
 <?php
 session_start();
-require('dbconnect.php');
+require_once('dbconnect.php');
 
 if(isset($_GET['id']) && isset($_SESSION['id'])){
     //元ツイートのdelete_flagを1にする

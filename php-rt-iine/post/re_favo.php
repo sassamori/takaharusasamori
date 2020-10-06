@@ -1,7 +1,7 @@
 <!-- 再いいねをする処理 -->
 <?php
 session_start();
-require('dbconnect.php');
+require_once('dbconnect.php');
 
 if(isset($_GET['id']) && isset($_SESSION['id'])){
     $re_favo = $db->prepare('UPDATE favos SET delete_flag=0 WHERE post_id=? AND pushing_member_id=?');

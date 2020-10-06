@@ -1,4 +1,4 @@
-<?php require('dbconnect.php'); ?>
+<?php require_once('dbconnect.php'); ?>
 <!doctype html>
 <html lang="ja">
 <head>
