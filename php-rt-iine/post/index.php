@@ -15,7 +15,7 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 >time()){
 
 //この辺をいじって、RT投稿に利用する
 if(!empty($_POST)){
-    if($_POST['message'] != ''){
+    if($_POST['message'] !== ''){
         $message = $db->prepare('INSERT INTO posts SET member_id=?,message=?,reply_post_id=?,created=NOW()');
         $message->execute(array(
             $member['id'],
