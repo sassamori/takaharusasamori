@@ -50,7 +50,7 @@ $posts->bindParam(1,$start,PDO::PARAM_INT);
 $posts->execute();
 
 //favosテーブルからデータを引き出す
-$favos = $db->query('SELECT * FROM favos');
+$favos = $db->query('SELECT * FROM favos WHERE NOT delete_flag=1');
 $favos_all = $favos->fetchall();
 //favosテーブルのレコードをカウントする
 $count = $db->query('SELECT COUNT(*) AS cnt FROM favos');
@@ -114,20 +114,12 @@ foreach($posts as $post):
         foreach($favos_all as $favo):
         ?>
             <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時、かつ、delete_flagが0の時に、「いいね済・いいね取り消し」ボタンを表示 -->
-            <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id'] && $favo['delete_flag'] == 0): ?>
+            <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id']): ?>
                 [いいね済][<a href="favo_cancel.php?id=<?php echo h($post['id']); ?>">いいね取り消し</a>]
+                <?php break; ?>
             <?php else: ?>
-                <!-- $not_favo_countに1を加える -->
-                <?php $not_favo_count++; ?>
-                <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時、かつ、delete_flagが1の時に、「再いいね」ボタンを表示 -->
-                <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id'] && $favo['delete_flag'] == 1): ?>
-                    [<a href="re_favo.php?id=<?php echo h($post['id']); ?>">再いいね</a>]
-                    <!-- 「再いいね」でも$not_favo_countをカウントしており、「再いいね」「いいね」が並んでしまうので、breakで逃れる -->
-                    <?php break; ?>
-                <!-- $not_favo_countとfavoのレコード数が同じだったら、「いいね」ボタンを表示 -->
-                <?php elseif($not_favo_count == $favo_count['cnt']): ?>
-                    [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
-                <?php endif ?>
+                [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
+                <?php break; ?>
             <?php endif ?>
         <?php endforeach ?>
 
