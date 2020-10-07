@@ -9,7 +9,7 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 >time()){
 
     $login_members = $db->prepare('SELECT * FROM members WHERE id=?');
     $login_members->execute(array($_SESSION['id']));
-    $member = $login_members->fetch();
+    $login_member = $login_members->fetch();
 }else{
     header('Location: login.php');
     exit();
@@ -20,7 +20,7 @@ if(!empty($_POST)){
     if($_POST['message'] !== ''){
         $message = $db->prepare('INSERT INTO posts SET member_id=?,message=?,reply_post_id=?,created=NOW()');
         $message->execute(array(
-            $member['id'],
+            $login_member['id'],
             $_POST['message'],
             $_POST['reply_post_id']
         ));
@@ -77,7 +77,7 @@ if(isset($_REQUEST['res'])){
 <div style="text-align: right"><a href="logout.php">ログアウト</a></div>
 <form action="" method="post">
     <dl>
-        <dt><?php echo h($member['name']); ?>さん、メッセージをどうぞ</dt>
+        <dt><?php echo h($login_member['name']); ?>さん、メッセージをどうぞ</dt>
         <dd>
             <textarea name="message" cols="50" rows="5"><?php echo h($message); ?></textarea>
             <input type="hidden" name="reply_post_id" value="<?php echo h($_REQUEST['res']); ?>">
@@ -110,7 +110,7 @@ foreach($posts as $post):
         <?php endif ?>
         <?php
         $favo_judgments = $db->prepare('SELECT * FROM favos WHERE post_id=? AND pushing_member_id=?');
-        $favo_judgments->execute(array($post['id'],$member['id']));
+        $favo_judgments->execute(array($post['id'],$login_member['id']));
         $favo_judgment = $favo_judgments->fetch();
         ?>
             <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時に、「いいね済・いいね取り消し」ボタンを表示 -->
@@ -121,7 +121,7 @@ foreach($posts as $post):
             <?php endif ?>
 
             <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
-            <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
+            <?php if($login_member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
                 [RT済]
                 (<?php echo h($rt_count['cnt']); ?>)
                 [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
@@ -139,7 +139,7 @@ foreach($posts as $post):
 
         <!-- RTカウント -->
 
-        <?php if($member['id'] == $post['member_id']): ?>
+        <?php if($login_member['id'] == $post['member_id']): ?>
             <br>[<a href="delete.php?id=<?php echo h($post['id']); ?>" style="color:#F33;">削除</a>]
         <?php endif ?>
     </p>

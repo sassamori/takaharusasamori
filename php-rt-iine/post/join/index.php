@@ -24,9 +24,9 @@ if(!empty($_POST)){
     }
 
     if(empty($error)){
-        $member = $db->prepare('SELECT COUNT(*) AS cnt FROM members WHERE email=?');
-        $member->execute(array($_POST['email']));
-        $record = $member->fetch();
+        $login_member = $db->prepare('SELECT COUNT(*) AS cnt FROM members WHERE email=?');
+        $login_member->execute(array($_POST['email']));
+        $record = $login_member->fetch();
         if($record['cnt'] > 0){
             $error['email'] = 'duplicate';
         }
