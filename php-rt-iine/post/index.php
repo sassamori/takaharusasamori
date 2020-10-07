@@ -109,20 +109,16 @@ foreach($posts as $post):
             <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元メッセージ</a>
         <?php endif ?>
         <?php
-        //$not_favo_countは、このpostにおけるfavoされていない数を数える
-        $not_favo_count = 0;
-        foreach($favos_all as $favo):
+        $favo_judgments = $db->prepare('SELECT * FROM favos WHERE post_id=? AND pushing_member_id=?');
+        $favo_judgments->execute(array($post['id'],$member['id']));
+        $favo_judgment = $favo_judgments->fetch();
         ?>
             <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時に、「いいね済・いいね取り消し」ボタンを表示 -->
-            <?php if($post['id'] == $favo['post_id'] && $member['id'] == $favo['pushing_member_id']): ?>
+            <?php if($favo_judgment): ?>
                 [いいね済][<a href="favo_cancel.php?id=<?php echo h($post['id']); ?>">いいね取り消し</a>]
-                <?php break; ?>
-            <!-- 上記以外の時は「いいね」ボタンを表示 -->
             <?php else: ?>
                 [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
-                <?php break; ?>
             <?php endif ?>
-        <?php endforeach ?>
 
             <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
             <?php if($member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
