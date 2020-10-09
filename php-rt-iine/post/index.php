@@ -1,8 +1,7 @@
 <?php
 session_start();
 require_once('dbconnect.php');
-require_once('function_h.php');
-require_once('function_makelink.php');
+require_once('function_common.php');
 
 if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 >time()){
     $_SESSION['time'] = time();
