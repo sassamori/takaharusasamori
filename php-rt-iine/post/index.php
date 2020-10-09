@@ -30,7 +30,6 @@ if(!empty($_POST)){
     }
 }
 
-$page = $_GET['page'];
 $page = $_GET['page'] ?? 1;
 $page = max($page,1);
 
