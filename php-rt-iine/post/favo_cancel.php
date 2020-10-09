@@ -10,4 +10,3 @@ if(isset($_GET['id']) && isset($_SESSION['id'])){
     header('Location: index.php');
     exit();
 }
-?>
