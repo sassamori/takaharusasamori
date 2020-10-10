@@ -56,6 +56,11 @@ foreach($posts as $post){
     $rt_counts->execute(array($post['id']));
     $rt_count = $rt_counts->fetch();
     $rt_counts_array[$post['id']] = $rt_count['cnt'];
+
+    $favo_judgments = $db->prepare('SELECT * FROM favos WHERE post_id=? AND pushing_member_id=? AND delete_flag=0');
+    $favo_judgments->execute(array($post['id'],$login_member['id']));
+    $favo_judgment = $favo_judgments->fetch();
+    $favo_judgment_array[$post['id']] = $favo_judgment;
 }
 
 //favosテーブルからデータを引き出す
@@ -112,34 +117,29 @@ if(isset($_REQUEST['res'])){
         <?php if($post['reply_post_id'] > 0): ?>
             <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元メッセージ</a>
         <?php endif ?>
-        <?php
-        $favo_judgments = $db->prepare('SELECT * FROM favos WHERE post_id=? AND pushing_member_id=?');
-        $favo_judgments->execute(array($post['id'],$login_member['id']));
-        $favo_judgment = $favo_judgments->fetch();
-        ?>
-            <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時に、「いいね済・いいね取り消し」ボタンを表示 -->
-            <?php if($favo_judgment): ?>
-                [いいね済][<a href="favo_cancel.php?id=<?php echo h($post['id']); ?>">いいね取り消し</a>]
-            <?php else: ?>
-                [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
-            <?php endif ?>
+        <!-- 該当のポストIDが一致している時、かつ、自分が押したいいねの時に、「いいね済・いいね取り消し」ボタンを表示 -->
+        <?php if($favo_judgment_array[$post['id']]): ?>
+            [いいね済][<a href="favo_cancel.php?id=<?php echo h($post['id']); ?>">いいね取り消し</a>]
+        <?php else: ?>
+            [<a href="favo.php?id=<?php echo h($post['id']); ?>">いいね</a>]
+        <?php endif ?>
 
-            <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
-            <?php if($login_member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
-                [RT済]
-                (<?php echo h($rt_counts_array[$post['id']]); ?>)
-                [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
-            <!-- 上記以外のリツイートのツイート（rt_flag=1）だったら何も表示しない -->
-            <?php elseif($post['rt_flag'] == 1): ?>
-            <!-- 削除フラグが1（delete_flag=1）だったら再RTと表示する -->
-            <?php elseif($post['delete_flag'] == 1): ?>
-                [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
-                (<?php echo h($rt_counts_array[$post['id']]); ?>)
-            <!-- 上記3つ以外だったらRTと表示する -->
-            <?php else: ?>
-                [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
-                (<?php echo h($rt_counts_array[$post['id']]); ?>)
-            <?php endif ?>
+        <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
+        <?php if($login_member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
+            [RT済]
+            (<?php echo h($rt_counts_array[$post['id']]); ?>)
+            [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
+        <!-- 上記以外のリツイートのツイート（rt_flag=1）だったら何も表示しない -->
+        <?php elseif($post['rt_flag'] == 1): ?>
+        <!-- 削除フラグが1（delete_flag=1）だったら再RTと表示する -->
+        <?php elseif($post['delete_flag'] == 1): ?>
+            [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
+            (<?php echo h($rt_counts_array[$post['id']]); ?>)
+        <!-- 上記3つ以外だったらRTと表示する -->
+        <?php else: ?>
+            [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
+            (<?php echo h($rt_counts_array[$post['id']]); ?>)
+        <?php endif ?>
 
         <!-- RTカウント -->
 
