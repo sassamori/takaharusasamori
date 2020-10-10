@@ -47,16 +47,27 @@ $posts = $db->prepare(
 $posts->bindParam(1,$start,PDO::PARAM_INT);
 $posts->execute();
 
+$posts = $posts->fetchAll();
+
+//$postsに関連した配列
+
+foreach($posts as $post){
+    $rt_counts = $db->prepare('SELECT COUNT(*) AS cnt FROM rts WHERE post_id=? AND rt_delete_flag=0');
+    $rt_counts->execute(array($post['id']));
+    $rt_count = $rt_counts->fetch();
+    $rt_counts_array[$post['id']] = $rt_count['cnt'];
+}
+
 //favosテーブルからデータを引き出す
 $favos = $db->query('SELECT * FROM favos WHERE NOT delete_flag=1');
-$favos_all = $favos->fetchall();
+$favos_all = $favos->fetchAll();
 //favosテーブルのレコードをカウントする
 $count = $db->query('SELECT COUNT(*) AS cnt FROM favos');
 $favo_count = $count->fetch();
 
 //rtsテーブルからデータを引き出す
 $rts = $db->query('SELECT * FROM rts');
-$rts_all = $rts->fetchall();
+$rts_all = $rts->fetchAll();
 
 if(isset($_REQUEST['res'])){
     $response = $db->prepare(
@@ -85,12 +96,7 @@ if(isset($_REQUEST['res'])){
         <input type="submit" value="投稿する" />
     </div>
 </form>
-<?php
-foreach($posts as $post):
-    $rt_counts = $db->prepare('SELECT COUNT(*) as cnt FROM rts WHERE rt_delete_flag=0 AND post_id=?');
-    $rt_counts->execute(array($post['id']));
-    $rt_count = $rt_counts->fetch();
-?>
+<?php foreach($posts as $post): ?>
 <div class="msg">
     <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
     <?php if($post['rt_flag'] == 1): ?>
@@ -121,18 +127,18 @@ foreach($posts as $post):
             <!-- リツイートのツイート（rt_flagが1）に対して、自分が押したRTの時、かつ、rt_delete_flagが0の時に、「RT済・RT取り消し」ボタンを表示する -->
             <?php if($login_member['id'] == $post['rt_member_id'] && $post['delete_flag'] == 0 && $post['rted_flag'] == 1): ?>
                 [RT済]
-                (<?php echo h($rt_count['cnt']); ?>)
+                (<?php echo h($rt_counts_array[$post['id']]); ?>)
                 [<a href="rt_cancel.php?id=<?php echo h($post['id']); ?>">RT取り消し</a>]
             <!-- 上記以外のリツイートのツイート（rt_flag=1）だったら何も表示しない -->
             <?php elseif($post['rt_flag'] == 1): ?>
             <!-- 削除フラグが1（delete_flag=1）だったら再RTと表示する -->
             <?php elseif($post['delete_flag'] == 1): ?>
                 [<a href="re_rt.php?id=<?php echo h($post['id']); ?>">再RT</a>]
-                (<?php echo h($rt_count['cnt']); ?>)
+                (<?php echo h($rt_counts_array[$post['id']]); ?>)
             <!-- 上記3つ以外だったらRTと表示する -->
             <?php else: ?>
                 [<a href="rt.php?id=<?php echo h($post['id']); ?>">RT</a>]
-                (<?php echo h($rt_count['cnt']); ?>)
+                (<?php echo h($rt_counts_array[$post['id']]); ?>)
             <?php endif ?>
 
         <!-- RTカウント -->
